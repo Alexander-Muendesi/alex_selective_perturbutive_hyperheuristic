@@ -1,9 +1,7 @@
 package data_classes;
 
-import java.util.ArrayList;
 
-public abstract class Data {
-    protected ArrayList<String> identifiers;//names of courses, constraints, rooms, curricula etc
+public class Data {
     protected int numCourses, numRooms, numDays, periodsPerDay, numCurricula, numConstraints;
 
     /**
@@ -16,7 +14,6 @@ public abstract class Data {
      * @param numConstraints
      */
     public Data(int numCourses, int numRooms, int numDays, int periodsPerDay, int numCurricula, int numConstraints){
-        identifiers = new ArrayList<String>();
         this.numCourses = numCourses;
         this.numRooms = numRooms;
         this.numDays = numDays;
@@ -49,9 +46,4 @@ public abstract class Data {
         return this.numConstraints;
     }
 
-    public ArrayList<String> getidentifiers(){
-        return this.identifiers;
-    }
-
-    public abstract void addIdentifier(String id);
 }
