@@ -78,7 +78,7 @@ q000 4 LetIta1 LinLatA StoArtMed1 StoFil1
 q001 3 LinLetLat1 StoMod1 StoArtMod1
 q002 4 LinLetLat1 StoMod1 StoArtMod1 Bibeco
 q003 4 LinLetLat1 StoMod1 StoArtMod1 Bibgra
-q004 4 StoCon StoArtCon1 LinTed1 AlfIn
+q004 4 StoCon StoArtCon1 LinTed1 AlfInf
 q005 4 LetIta1 LinGreA LinLatA StoFil1
 q006 3 LinLetGre1 LinLetLat1 ArcCla1
 q007 3 LinLetLat1 LetCriAnt Papiro
@@ -172,7 +172,7 @@ q096 4 StoArt LegBenCul1 AntCul1 StoCon
 q100 5 StoVicOriAnt ArcEge BioArcCS StoGreCS Papiro
 q101 4 StoVicOriAnt Papiro BioArcCS StoGreCS
 q102 5 PrePro ArcEge BioArcCS StoGreCS Papiro
-q103 4 PrePro Papiro BioArcCS StoGreC
+q103 4 PrePro Papiro BioArcCS StoGreCS
 q104 1 Antrop
 q105 3 BibgraCS LegBenCul2 StoMod1
 q106 3 BibgraCS LegBenCul2 StoCon

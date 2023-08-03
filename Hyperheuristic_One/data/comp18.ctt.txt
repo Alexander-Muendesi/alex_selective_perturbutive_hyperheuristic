@@ -576,7 +576,7 @@ CBC-ART-StoArcMed 3 4
 CBC-ART-StoArcMed 3 5
 CBC-ART-StoArcMed 4 0
 CBC-ART-StoArcMed 4 1
-CBC-ART-StoArcMed 4 2 
+CBC-ART-StoArcMed 4 2
 CBC-ART-StoArcMed 4 3
 CBC-ART-StoArcMed 4 4
 CBC-ART-StoArcMed 4 5
