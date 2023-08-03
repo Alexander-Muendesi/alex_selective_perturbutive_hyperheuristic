@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Courses extends Data{
     private ArrayList<String> courseId;
     private ArrayList<String> teacherId;
-    private ArrayList<Integer> numPeriods;
     private ArrayList<Integer> numLectures;
+    private ArrayList<Integer> minWorkingDays;
     private ArrayList<Integer> numStudentsEnrolled;
     
     /**
@@ -22,8 +22,8 @@ public class Courses extends Data{
         super(numCourses, numRooms, numDays, periodsPerDay, numCurricula, numConstraints);
         courseId = new ArrayList<String>();
         teacherId = new ArrayList<String>();
-        numPeriods = new ArrayList<Integer>();
         numLectures = new ArrayList<Integer>();
+        minWorkingDays = new ArrayList<Integer>();
         numStudentsEnrolled = new ArrayList<Integer>();
     }
 
@@ -31,15 +31,15 @@ public class Courses extends Data{
      * This method adds a row from the data set in the courses section into the various data structures
      * @param course
      * @param teacherId
-     * @param numPeriods
      * @param numLectures
+     * @param minWorkingDays
      * @param numStudentsEnrolled
      */
-    public void addEntry(String courseId, String teacherId, int numPeriods, int numLectures, int numStudentsEnrolled){
+    public void addEntry(String courseId, String teacherId, int numLectures, int minWorkingDays, int numStudentsEnrolled){
         this.courseId.add(courseId);
         this.teacherId.add(teacherId);
-        this.numPeriods.add(numPeriods);
         this.numLectures.add(numLectures);
+        this.minWorkingDays.add(minWorkingDays);
         this.numStudentsEnrolled.add(numStudentsEnrolled);
     }
     
@@ -51,15 +51,21 @@ public class Courses extends Data{
         return teacherId.get(index);
     }
 
-    public int getNumPeriods(int index){
-        return numPeriods.get(index);
-    }
-
     public int getNumLectures(int index){
         return numLectures.get(index);
     }
 
+    public int getMinWorkingDays(int index){
+        return minWorkingDays.get(index);
+    }
+
     public int getNumStudentsEnrolled(int index){
         return numStudentsEnrolled.get(index);
+    }
+
+    public void print(){
+        for(int i = 0; i < courseId.size(); i++){
+            System.out.println(courseId.get(i) + " " + teacherId.get(i) + " " + numLectures.get(i) + " " + minWorkingDays.get(i) + " " + numStudentsEnrolled.get(i));
+        }
     }
 }

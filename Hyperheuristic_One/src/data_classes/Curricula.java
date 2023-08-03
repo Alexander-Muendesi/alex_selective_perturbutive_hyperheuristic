@@ -46,4 +46,15 @@ public class Curricula extends Data{
     public String[] getCourses(int index){
         return this.courses.get(index);
     }
+
+    public void print(){
+        for(int i=0; i<curriculaIds.size();i++){
+            System.out.print(curriculaIds.get(i) + ' ' + numCourses.get(i) + ' ');
+
+            for(String val: courses.get(i))
+                System.out.print(val + ' ');
+                
+            System.out.println();
+        }
+    }
 }

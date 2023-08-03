@@ -38,4 +38,9 @@ public class Rooms extends Data{
     public int getCapacity(int index){
         return this.capacity.get(index);
     }
+
+    public void print(){
+        for(int i=0; i<roomId.size();i++)
+            System.out.println(roomId.get(i) + " " + capacity.get(i));
+    }
 }

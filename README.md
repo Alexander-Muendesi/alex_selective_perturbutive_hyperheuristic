@@ -27,3 +27,8 @@ c0001 4 0
 column 1: the course code
 column 2: the number of periods that the course is unavailable for
 column 3: the specific period/time slot during which the course is unavailable.
+
+Courses: CourseId_Teacher_#Lectures_MinWorkingDays_#students
+Rooms: roomId_Capacity
+Curricula: curriculumId_#courses_couseId_. . ._courseId
+Unavailability_constraints: courseId_day_dayPeriod

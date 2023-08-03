@@ -1,7 +1,7 @@
 package data_classes;
 
 
-public class Data {
+public abstract class Data {
     protected int numCourses, numRooms, numDays, periodsPerDay, numCurricula, numConstraints;
 
     /**
@@ -46,4 +46,5 @@ public class Data {
         return this.numConstraints;
     }
 
+    public abstract void print();
 }
