@@ -1,0 +1,499 @@
+package perturbator_classes;
+
+public class Heuristic {
+    
+}
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+public class TimetableScheduler {
+
+    // Course class to hold course information
+    static class Course {
+        String courseId;
+        String teacher;
+        int numLectures;
+        int minWorkingDays;
+        int numStudents;
+
+        public Course(String courseId, String teacher, int numLectures, int minWorkingDays, int numStudents) {
+            this.courseId = courseId;
+            this.teacher = teacher;
+            this.numLectures = numLectures;
+            this.minWorkingDays = minWorkingDays;
+            this.numStudents = numStudents;
+        }
+    }
+
+    // Room class to hold room information
+    static class Room {
+        String roomId;
+        int capacity;
+
+        public Room(String roomId, int capacity) {
+            this.roomId = roomId;
+            this.capacity = capacity;
+        }
+    }
+
+    // Curriculum class to hold curriculum information
+    static class Curriculum {
+        String curriculumId;
+        List<String> courseIds;
+
+        public Curriculum(String curriculumId, List<String> courseIds) {
+            this.curriculumId = curriculumId;
+            this.courseIds = courseIds;
+        }
+    }
+
+    public static void main(String[] args) {
+        // Example dataset (You can parse this data from the file or use any other method)
+        List<Course> courses = Arrays.asList(
+            new Course("c0001", "t000", 6, 4, 130),
+            // Add other courses here
+        );
+
+        List<Room> rooms = Arrays.asList(
+            new Room("B", 200),
+            // Add other rooms here
+        );
+
+        List<Curriculum> curricula = Arrays.asList(
+            new Curriculum("q000", Arrays.asList("c0001", "c0002", "c0004", "c0005")),
+            // Add other curricula here
+        );
+
+        int numDays = 5;
+        int periodsPerDay = 6;
+
+        // Create an initial feasible timetable
+        String[][][] timetable = new String[numDays][periodsPerDay][rooms.size()];
+
+        // Shuffle the courses list to randomize the initial assignment
+        Collections.shuffle(courses);
+
+        // Loop through the courses and assign lectures to the timetable
+        int roomIndex = 0;
+        int day = 0;
+        int period = 0;
+        for (Course course : courses) {
+            int lecturesAssigned = 0;
+            while (lecturesAssigned < course.numLectures) {
+                // Check if the current slot is available and satisfies hard constraints
+                if (timetable[day][period][roomIndex] == null) {
+                    boolean allConstraintsSatisfied = true;
+                    // Check other constraints like conflicts, room capacity, and teacher availability
+                    // You need to implement this part based on the provided constraints
+                    // For this example, we assume all constraints are satisfied
+                    if (allConstraintsSatisfied) {
+                        timetable[day][period][roomIndex] = course.courseId;
+                        lecturesAssigned++;
+                    }
+                }
+
+                // Move to the next slot
+                period++;
+                if (period >= periodsPerDay) {
+                    period = 0;
+                    day++;
+                }
+                if (day >= numDays) {
+                    day = 0;
+                    roomIndex++;
+                    if (roomIndex >= rooms.size()) {
+                        roomIndex = 0;
+                    }
+                }
+            }
+        }
+
+        // Print the initial timetable
+        for (day = 0; day < numDays; day++) {
+            for (period = 0; period < periodsPerDay; period++) {
+                for (roomIndex = 0; roomIndex < rooms.size(); roomIndex++) {
+                    String courseId = timetable[day][period][roomIndex];
+                    System.out.print(courseId != null ? courseId : " - ");
+                    System.out.print("\t");
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
+    }
+
+    import java.util.ArrayList;
+    import java.util.Arrays;
+    import java.util.Collections;
+    import java.util.HashSet;
+    import java.util.List;
+    import java.util.Set;
+
+    public class TimetableScheduler {
+
+        // ... (previous code for Course, Room, and Curriculum classes)
+
+        // Helper method to check if a room is available in a specific period
+        private static boolean isRoomAvailable(String[][][] timetable, int day, int period, String roomId) {
+            for (int roomIndex = 0; roomIndex < timetable[day][period].length; roomIndex++) {
+                if (roomId.equals(timetable[day][period][roomIndex])) {
+                    return false; // Room is already occupied in this period
+                }
+            }
+            return true; // Room is available in this period
+        }
+
+        // Method to create an initial feasible timetable that satisfies hard constraints
+        private static void createInitialTimetable(String[][][] timetable, List<Course> courses, List<Room> rooms) {
+            // Shuffle the courses list to randomize the initial assignment
+            Collections.shuffle(courses);
+
+            // Track rooms that are already assigned in each period
+            Set<String> assignedRooms = new HashSet<>();
+
+            // Loop through the courses and assign lectures to the timetable
+            int day = 0;
+            int period = 0;
+            for (Course course : courses) {
+                int lecturesAssigned = 0;
+                while (lecturesAssigned < course.numLectures) {
+                    // Check if the current slot is available and satisfies hard constraints
+                    if (timetable[day][period][0] == null) {
+                        // Check room availability in this period
+                        boolean roomAvailable = isRoomAvailable(timetable, day, period, rooms.get(0).roomId);
+                        if (roomAvailable) {
+                            timetable[day][period][0] = course.courseId;
+                            assignedRooms.add(rooms.get(0).roomId); // Mark the room as assigned in this period
+                            lecturesAssigned++;
+                        }
+                    }
+
+                    // Move to the next slot
+                    period++;
+                    if (period >= periodsPerDay) {
+                        period = 0;
+                        day++;
+                    }
+                    if (day >= numDays) {
+                        day = 0;
+
+                        // Clear the assignedRooms set for the next day
+                        assignedRooms.clear();
+                    }
+                }
+            }
+        }
+
+        public static void main(String[] args) {
+            // ... (previous code for parsing input data)
+
+            // Create an initial feasible timetable that satisfies hard constraints
+            String[][][] timetable = new String[numDays][periodsPerDay][rooms.size()];
+            createInitialTimetable(timetable, courses, rooms);
+
+            // Print the initial timetable
+            for (int day = 0; day < numDays; day++) {
+                for (int period = 0; period < periodsPerDay; period++) {
+                    for (int roomIndex = 0; roomIndex < rooms.size(); roomIndex++) {
+                        String courseId = timetable[day][period][roomIndex];
+                        System.out.print(courseId != null ? courseId : " - ");
+                        System.out.print("\t");
+                    }
+                    System.out.println();
+                }
+                System.out.println();
+            }
+        }
+    }
+
+    import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class TimetableScheduler {
+
+    // ... (previous code for Course, Room, and Curriculum classes)
+
+    // Helper method to check if a teacher is available in a specific period
+    private static boolean isTeacherAvailable(String[][][] timetable, int day, int period, String teacherId) {
+        Set<String> assignedTeachers = new HashSet<>();
+
+        for (int roomIndex = 0; roomIndex < timetable[day][period].length; roomIndex++) {
+            String courseId = timetable[day][period][roomIndex];
+            if (courseId != null) {
+                Course course = findCourseById(courseId);
+                if (teacherId.equals(course.teacher)) {
+                    if (assignedTeachers.contains(teacherId)) {
+                        return false; // Teacher is already assigned in this period
+                    } else {
+                        assignedTeachers.add(teacherId); // Mark the teacher as assigned in this period
+                    }
+                }
+            }
+        }
+        return true; // Teacher is available in this period
+    }
+
+    // Find a course by its ID
+    private static Course findCourseById(String courseId) {
+        // Implement this method to search for a course by its ID in the 'courses' list
+        // Return the Course object if found, or null if not found
+    }
+
+    // ... (other methods)
+
+    public static void main(String[] args) {
+        // ... (previous code for parsing input data)
+
+        // ... (previous code for creating an initial timetable)
+
+        // Check the constraint that each teacher is not scheduled more than once per period
+        for (int day = 0; day < numDays; day++) {
+            for (int period = 0; period < periodsPerDay; period++) {
+                for (int roomIndex = 0; roomIndex < rooms.size(); roomIndex++) {
+                    String courseId = timetable[day][period][roomIndex];
+                    if (courseId != null) {
+                        Course course = findCourseById(courseId);
+                        if (!isTeacherAvailable(timetable, day, period, course.teacher)) {
+                            System.out.println("Teacher " + course.teacher + " is scheduled more than once in period "
+                                    + period + " of day " + day);
+                            // Handle the violation of the constraint here (e.g., reschedule the course)
+                        }
+                    }
+                }
+            }
+        }
+
+        // ... (other code)
+    }
+}
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class TimetableScheduler {
+
+    // ... (previous code for Course, Room, and Curriculum classes)
+
+    // Helper method to check if a curriculum has a course assigned in a specific period
+    private static boolean isCurriculumAvailable(String[][][] timetable, int day, int period, Curriculum curriculum) {
+        for (int roomIndex = 0; roomIndex < timetable[day][period].length; roomIndex++) {
+            String courseId = timetable[day][period][roomIndex];
+            if (courseId != null) {
+                Course course = findCourseById(courseId);
+                if (curriculum.courseIds.contains(course.courseId)) {
+                    return false; // Curriculum already has a course assigned in this period
+                }
+            }
+        }
+        return true; // Curriculum does not have a course assigned in this period
+    }
+
+    // ... (other methods)
+
+    // Method to create an initial feasible timetable that satisfies hard constraints
+    private static void createInitialTimetable(String[][][] timetable, List<Course> courses, List<Room> rooms,
+                                               List<Curriculum> curricula) {
+        // Shuffle the courses list to randomize the initial assignment
+        Collections.shuffle(courses);
+
+        // Loop through the courses and assign lectures to the timetable
+        int day = 0;
+        int period = 0;
+        for (Course course : courses) {
+            int lecturesAssigned = 0;
+            while (lecturesAssigned < course.numLectures) {
+                // Check if the current slot is available and satisfies hard constraints
+                if (timetable[day][period][0] == null) {
+                    // Check room availability in this period
+                    boolean roomAvailable = isRoomAvailable(timetable, day, period, rooms.get(0).roomId);
+                    boolean teacherAvailable = isTeacherAvailable(timetable, day, period, course.teacher);
+                    boolean curriculumAvailable = isCurriculumAvailable(timetable, day, period, findCurriculumByCourseId(course.courseId));
+
+                    if (roomAvailable && teacherAvailable && curriculumAvailable) {
+                        timetable[day][period][0] = course.courseId;
+                        assignedRooms.add(rooms.get(0).roomId); // Mark the room as assigned in this period
+                        lecturesAssigned++;
+                    }
+                }
+
+                // Move to the next slot
+                period++;
+                if (period >= periodsPerDay) {
+                    period = 0;
+                    day++;
+                }
+                if (day >= numDays) {
+                    day = 0;
+
+                    // Clear the assignedRooms set for the next day
+                    assignedRooms.clear();
+                }
+            }
+        }
+    }
+
+    // ... (other code)
+
+}
+
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Set;
+
+public class TimetableScheduler {
+
+    // ... (previous code for Course, Room, and Curriculum classes)
+
+    // Helper method to get the total number of lectures assigned for a course
+    private static int getAssignedLecturesCount(String[][][] timetable, Course course) {
+        int lecturesCount = 0;
+        for (int day = 0; day < numDays; day++) {
+            for (int period = 0; period < periodsPerDay; period++) {
+                for (int roomIndex = 0; roomIndex < rooms.size(); roomIndex++) {
+                    String courseId = timetable[day][period][roomIndex];
+                    if (courseId != null && courseId.equals(course.courseId)) {
+                        lecturesCount++;
+                    }
+                }
+            }
+        }
+        return lecturesCount;
+    }
+
+    // Method to create an initial feasible timetable that satisfies hard constraints
+    private static void createInitialTimetable(String[][][] timetable, List<Course> courses, List<Room> rooms,
+                                               List<Curriculum> curricula) {
+        // Shuffle the courses list to randomize the initial assignment
+        Collections.shuffle(courses);
+
+        // Loop through the courses and assign lectures to the timetable
+        int day = 0;
+        int period = 0;
+        for (Course course : courses) {
+            int requiredLectures = course.numLectures;
+            int assignedLectures = getAssignedLecturesCount(timetable, course);
+
+            // Assign remaining lectures until the required number is reached
+            while (assignedLectures < requiredLectures) {
+                // Check if the current slot is available and satisfies hard constraints
+                if (timetable[day][period][0] == null) {
+                    // Check room availability in this period
+                    boolean roomAvailable = isRoomAvailable(timetable, day, period, rooms.get(0).roomId);
+                    boolean teacherAvailable = isTeacherAvailable(timetable, day, period, course.teacher);
+                    boolean curriculumAvailable = isCurriculumAvailable(timetable, day, period, findCurriculumByCourseId(course.courseId));
+
+                    if (roomAvailable && teacherAvailable && curriculumAvailable) {
+                        timetable[day][period][0] = course.courseId;
+                        assignedRooms.add(rooms.get(0).roomId); // Mark the room as assigned in this period
+                        assignedLectures++;
+                    }
+                }
+
+                // Move to the next slot
+                period++;
+                if (period >= periodsPerDay) {
+                    period = 0;
+                    day++;
+                }
+                if (day >= numDays) {
+                    day = 0;
+
+                    // Clear the assignedRooms set for the next day
+                    assignedRooms.clear();
+                }
+            }
+        }
+    }
+
+    // ... (other code)
+
+}
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class TimetableScheduler {
+
+    // ... (previous code for Course, Room, and Curriculum classes)
+
+    // Method to check if a course is available in a specific period based on UNAVAILABILITY_CONSTRAINTS
+    private static boolean isCourseAvailable(String courseId, int day, int period) {
+        // Loop through the UNAVAILABILITY_CONSTRAINTS to check if the course is available
+        for (String[] constraint : unavailabilityConstraints) {
+            if (constraint[0].equals(courseId) && Integer.parseInt(constraint[1]) == day &&
+                Integer.parseInt(constraint[2]) == period) {
+                return false; // Course is unavailable in this period
+            }
+        }
+        return true; // Course is available in this period
+    }
+
+    // Method to create an initial feasible timetable that satisfies hard constraints
+    private static void createInitialTimetable(String[][][] timetable, List<Course> courses, List<Room> rooms,
+                                               List<Curriculum> curricula) {
+        // Shuffle the courses list to randomize the initial assignment
+        Collections.shuffle(courses);
+
+        // Loop through the courses and assign lectures to the timetable
+        int day = 0;
+        int period = 0;
+        for (Course course : courses) {
+            int requiredLectures = course.numLectures;
+            int assignedLectures = getAssignedLecturesCount(timetable, course);
+
+            // Assign remaining lectures until the required number is reached
+            while (assignedLectures < requiredLectures) {
+                // Check if the current slot is available and satisfies hard constraints
+                if (timetable[day][period][0] == null) {
+                    // Check room availability in this period
+                    boolean roomAvailable = isRoomAvailable(timetable, day, period, rooms.get(0).roomId);
+                    boolean teacherAvailable = isTeacherAvailable(timetable, day, period, course.teacher);
+                    boolean curriculumAvailable = isCurriculumAvailable(timetable, day, period, findCurriculumByCourseId(course.courseId));
+                    boolean courseAvailable = isCourseAvailable(course.courseId, day, period);
+
+                    if (roomAvailable && teacherAvailable && curriculumAvailable && courseAvailable) {
+                        timetable[day][period][0] = course.courseId;
+                        assignedRooms.add(rooms.get(0).roomId); // Mark the room as assigned in this period
+                        assignedLectures++;
+                    }
+                }
+
+                // Move to the next slot
+                period++;
+                if (period >= periodsPerDay) {
+                    period = 0;
+                    day++;
+                }
+                if (day >= numDays) {
+                    day = 0;
+
+                    // Clear the assignedRooms set for the next day
+                    assignedRooms.clear();
+                }
+            }
+        }
+    }
+
+    // ... (other code)
+
+}
+
+}

@@ -3,15 +3,15 @@ package data_classes;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.List;
 
 public class DataReader {
-    private int numCourses,  numRooms,  numDays,  periodsPerDay,  numCurricula,  numConstraints;
-    private Courses courses;
-    private Rooms rooms;
-    private Curricula curricula;
-    private Constraints constraints;
-    private String filename = "Hyperheuristic_One/data/comp";
-    private Data[] data;
+    public int numCourses,  numRooms,  numDays,  periodsPerDay,  numCurricula,  numConstraints;
+    public List<Course> courses;
+    public List<Room> rooms;
+    public List<Curriculum> curricula;
+    public List<Constraint> constraints;
+    public String filename = "Hyperheuristic_One/data/comp";
 
     /**
      * 
@@ -23,7 +23,10 @@ public class DataReader {
         else
             filename += String.valueOf(fileNumber) + ".ctt.txt";
 
-        data = new Data[4];
+        this.courses = new ArrayList<Course>();
+        this.rooms = new ArrayList<Room>();
+        this.curricula = new ArrayList<Curriculum>();
+        this.constraints = new ArrayList<Constraint>();
 
         readFile();
     }
@@ -67,10 +70,6 @@ public class DataReader {
                 else if(data.get(0).equals("Constraints:")){
                     this.numConstraints = Integer.parseInt(data.get(1));
                     headerData = true;
-                    this.courses = new Courses(numCourses, numRooms, numDays, periodsPerDay, numCurricula, numConstraints);
-                    this.rooms = new Rooms(numCourses, numRooms, numDays, periodsPerDay, numCurricula, numConstraints);
-                    this.curricula = new Curricula(numCourses, numRooms, numDays, periodsPerDay, numCurricula, numConstraints);
-                    this.constraints = new Constraints(numCourses, numRooms, numDays, periodsPerDay, numCurricula, numConstraints);
                 }
                 else if(headerData){
                     if(data.get(0).equals("COURSES:")){
@@ -92,32 +91,26 @@ public class DataReader {
                         constraints = false;
                     }
                     else if(courses)
-                        this.courses.addEntry(data.get(0), data.get(1), Integer.parseInt(data.get(2)), Integer.parseInt(data.get(3)), Integer.parseInt(data.get(4)));
+                        this.courses.add(new Course(data.get(0), data.get(1), Integer.parseInt(data.get(2)), Integer.parseInt(data.get(3)), Integer.parseInt(data.get(4))));
                     else if(rooms)
-                        this.rooms.addEntry(data.get(0), Integer.parseInt(data.get(1)));
+                        this.rooms.add(new Room(data.get(0), Integer.parseInt(data.get(1))));
                     else if(curricula){
-                            String[] temp = new String[data.size() - 2];
+                            List<String> temp = new ArrayList<String>();
                             int counter = 0;
                             int index = 0;
 
                             for(String val: data){
                                 if(counter > 1)
-                                    temp[index++] = data.get(counter);
+                                    temp.add(data.get(counter));
                                 counter++;
                             }
-                            this.curricula.addEntry(data.get(0), Integer.parseInt(data.get(1)), temp);
+                            this.curricula.add(new Curriculum(data.get(0), Integer.parseInt(data.get(1)), temp));
                     }
                     else if(constraints)
-                        this.constraints.addEntry(data.get(0), Integer.parseInt(data.get(1)), Integer.parseInt(data.get(2)));
+                        this.constraints.add(new Constraint(data.get(0), Integer.parseInt(data.get(1)), Integer.parseInt(data.get(2))));
 
                 }
             }
-
-            this.data[0] = this.courses;
-            this.data[1] = this.rooms;
-            this.data[2] = this.curricula;
-            this.data[3] = this.constraints;
-
             //free I/O
             reader.close();
         }
@@ -127,11 +120,11 @@ public class DataReader {
     }
 
     /**
-     * index 0: Courses, index 1: rooms, index 2: curricula, index 3: Constraints
-     * @return
+     * @return numCourses,  numRooms,  numDays,  periodsPerDay,  numCurricula,  numConstraints
      */
-    public Data[] getData(){
-        return this.data;
-    }
+    public int[] getHeaderData(){
+        int result[] = {numCourses,  numRooms,  numDays,  periodsPerDay,  numCurricula,  numConstraints};
+        return result;
+    }   
 
 }
