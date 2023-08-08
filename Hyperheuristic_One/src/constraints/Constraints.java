@@ -16,9 +16,29 @@ public class Constraints {
 
     /**
      * The required number of lectures must be scheduled in the timetable
+     * @param timetable
+     * @param course
+     * @return true=satisfied. false=not satisfied
      */
-    public void lecturesConstraint(){
+    public boolean lecturesConstraint(String[][][] timetable, Course course){
+        boolean stop = false;
+        int numAssignedLectures = 0;
 
+        for(int day = 0; day < reader.numDays && !stop; day++){
+            for(int period = 0; period < reader.periodsPerDay && !stop; period++){
+                for(int roomIndex = 0; roomIndex < reader.rooms.size() && !stop; roomIndex++){
+                    if(numAssignedLectures < course.numLectures){
+                        if(course.courseId.equals(timetable[day][period][roomIndex]))
+                            numAssignedLectures++;
+                    }
+                    else{
+                        stop = true;
+                    }
+                }
+            }
+        }
+
+        return stop;
     }
 
     /**
