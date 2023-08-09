@@ -8,8 +8,8 @@ import data_classes.DataReader;
 
 public class Swap extends Heuristic{
     /**
-     * num invocations
-     * @param n
+     * 
+     * @param n num invocations
      */
     public Swap(int n, Random random, DataReader reader){
         super(n, random, reader);
@@ -32,6 +32,19 @@ public class Swap extends Heuristic{
             int dayTwo = random.nextInt(copy.length);
             int periodTwo = random.nextInt(copy[0].length);
             int roomIndexTwo = random.nextInt(copy[0][0].length);
+
+            //make sure the 2 timeslots are not the same
+            if(dayOne == dayTwo && periodOne == periodTwo && roomIndexOne == roomIndexTwo){
+                while(true){
+                    if(dayOne == dayTwo && periodOne == periodTwo && roomIndexOne == roomIndexTwo){
+                        dayTwo = random.nextInt(copy.length);
+                        periodTwo = random.nextInt(copy[0].length);
+                        roomIndexTwo = random.nextInt(copy[0][0].length);
+                    }
+                    else
+                        break;
+                }
+            }
 
             String courseOne = copy[dayOne][periodOne][roomIndexOne];
             String courseTwo = copy[dayTwo][periodTwo][roomIndexTwo];
@@ -94,7 +107,10 @@ public class Swap extends Heuristic{
         for(int i=0; i < timetable.length; i++)
             for(int j=0; j < timetable[0].length; j++)
                 for(int k=0; k < timetable[0][0].length; k++)
-                    result[i][j][k] = new String(timetable[i][j][k]);
+                    if(timetable[i][j][k] != null)
+                        result[i][j][k] = new String(timetable[i][j][k]);
+                    else
+                        result[i][j][k] = null;
 
         return result;
     }
