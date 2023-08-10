@@ -42,9 +42,9 @@ public class AllocateDeallocate extends Heuristic{
 
         boolean foundNewSlot = false;
         //reassign the lecture somewhere it fits
-        for(int d=0; d<reader.numDays; d++)
-            for(int p=0; p<reader.periodsPerDay;p++)
-                for(int r=0;r<reader.rooms.size();r++)
+        for(int d=0; d<reader.numDays && !foundNewSlot; d++)
+            for(int p=0; p<reader.periodsPerDay && !foundNewSlot;p++)
+                for(int r=0;r<reader.rooms.size() && !foundNewSlot;r++)
                     if(copy[d][p][r] == null && !(day==d && period == p && roomIndex == r)){
                         copy[d][p][r] = courseName;
                         foundNewSlot = true;

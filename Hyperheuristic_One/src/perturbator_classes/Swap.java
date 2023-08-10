@@ -1,9 +1,6 @@
 package perturbator_classes;
 
 import java.util.Random;
-
-import data_classes.Course;
-import data_classes.Curriculum;
 import data_classes.DataReader;
 
 public class Swap extends Heuristic{

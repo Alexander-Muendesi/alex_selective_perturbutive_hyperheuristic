@@ -4,6 +4,8 @@ import constructor_classes.Solutions;
 import data_classes.Course;
 import data_classes.DataReader;
 import perturbator_classes.Swap;
+import perturbator_classes.AllocateDeallocate;
+import perturbator_classes.AllocateDeallocate;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -30,7 +32,7 @@ public class App {
         s.printTimetable();
         
         System.out.println("------------------------------------------------------------------------");
-        Swap swap = new Swap(5, random, reader);
+        AllocateDeallocate swap = new AllocateDeallocate(5, random, reader);
         s.timetable = swap.executeHeuristic(s.timetable);
         s.printTimetable();
     }
