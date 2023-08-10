@@ -55,7 +55,7 @@ public class Timetable {
     }
 
     public int calculateSoftConstraintCost(){
-
+        
     }
 
 
