@@ -9,7 +9,7 @@ import data_classes.DataReader;
 
 public class Solutions {
     private final DataReader reader;
-    private String[][][] timetable;//numDays x PeriodsPerDay x numRooms
+    public String[][][] timetable;//numDays x PeriodsPerDay x numRooms
     private Random random;
     private final Constraints constraints;
 
