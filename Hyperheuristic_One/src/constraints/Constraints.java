@@ -81,6 +81,38 @@ public class Constraints {
     }
 
     /**
+     * This method calculates the cost of teacher constraint in the timetable
+     * @param timetable
+     * @param day
+     * @param period
+     * @param teacherId
+     * @return
+     */
+    public int teacherConstraintCost(String[][][] timetable, int day, int period, String teacherId){
+        int cost = -1;
+        for(int roomIndex=0;roomIndex < timetable[day][period].length;roomIndex++){
+            String courseId =  timetable[day][period][roomIndex];
+
+            if(courseId != null){
+                Course course = searchForCourse(courseId);
+                if(course == null){
+                    System.out.println("Null even though there should not be in teacherConstraintCost");
+                    return cost;
+                }
+                else{
+                    if(teacherId.equals(course.teacherId)){
+                        if(cost == -1)//ignore first instance of the teacherId
+                            cost++;
+                        else//one violation for every other occurrence of the teacher id
+                            cost++;
+                    }
+                }
+            }
+        }
+        return cost;
+    }
+
+    /**
      * Conflicts hard constraint: Lectures for courses in a curriculum must be scheduled in different periods
      * @param timetable
      * @param day
@@ -93,17 +125,43 @@ public class Constraints {
             String courseId = timetable[day][period][roomIndex];
             
             if(courseId != null){
-                Course course = searchForCourse(courseId);
-                if(course == null){
-                    System.out.println("There is a null even though there shouldn't be in conflictsConstraint");
+                // Course course = searchForCourse(courseId);
+                // if(course == null){
+                //     System.out.println("There is a null even though there shouldn't be in conflictsConstraint");
+                //     return false;
+                // }
+                // else if(curriculum.courses.contains(course.courseId))
+                //     return false;//curriculum already has a course assigned in this period
+                if(curriculum.courses.contains(courseId))
                     return false;
-                }
-                else if(curriculum.courses.contains(course.courseId))
-                    return false;//curriculum already has a course assigned in this period
             }
         }
 
         return true;//curriculum does not have a course assigned in this period
+    }
+
+    /**
+     * This method calculates the cost of this hard constraint being violated.
+     * @param timetable
+     * @param day
+     * @param period
+     * @param curriculum
+     * @return
+     */
+    public int conflictsConstraintCost(String[][][] timetable, int day, int period, Curriculum curriculum){
+        int cost = -1;
+
+        for(int roomIndex = 0; roomIndex < timetable[day][period].length;roomIndex++){
+            String courseId = timetable[day][period][roomIndex];
+
+            if(courseId != null){
+                if(curriculum.courses.contains(courseId)){
+                    cost++;
+                }
+            }
+        }
+
+        return cost;
     }
 
     /**
