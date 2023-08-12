@@ -54,8 +54,19 @@ public class Timetable {
         return conflictsConstraintCost + teacherConstraintCost;
     }
 
+    /**
+     * This methd calculates the soft constraint costs of the current timetable
+     * @return Soft constraint cost
+     */
     public int calculateSoftConstraintCost(){
-        
+        //TODO: Multi-threading should be very efficient here since we are just doig read only. 1 thread per cost
+        int roomCapacityConstraintCost = constraints.roomCapacityConstraintCost(timetable);
+        int minimumWorkingDaysConstraintCost = constraints.minimumWorkingDaysConstraintCost(timetable);
+        int curriculumCompactnessCost = constraints.curriculumCompactnessCost(timetable);
+        int roomStabilityConstraintCost = constraints.roomStabilityConstraintCost(timetable);
+
+        int cost = roomCapacityConstraintCost + minimumWorkingDaysConstraintCost + curriculumCompactnessCost + roomStabilityConstraintCost;
+        return cost;
     }
 
 

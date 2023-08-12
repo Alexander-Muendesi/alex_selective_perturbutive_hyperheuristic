@@ -3,8 +3,8 @@ package data_classes;
 import java.util.ArrayList;
 
 public class Room{
-    String roomId;
-    int capacity;
+    public String roomId;
+    public int capacity;
 
     /**
      * 

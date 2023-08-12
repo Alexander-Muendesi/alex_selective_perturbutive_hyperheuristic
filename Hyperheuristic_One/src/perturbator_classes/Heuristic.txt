@@ -497,3 +497,121 @@ public class TimetableScheduler {
 }
 
 }
+
+import java.util.*;
+
+public class CurriculumCompactnessChecker {
+
+    public static void main(String[] args) {
+        // Sample timetable data (timetable should be represented in your actual program)
+        String[][][] timetable = new String[5][6][6]; // [days][periods_per_day][rooms]
+
+        // Sample curriculum data (you should have your curriculum information)
+        Map<String, List<String>> curriculumCourses = new HashMap<>();
+        curriculumCourses.put("q000", Arrays.asList("c0001", "c0002"));
+        curriculumCourses.put("q001", Arrays.asList("c0014", "c0015", "c0016", "c0017"));
+
+        int penaltyPoints = calculateCurriculumCompactnessPenalty(timetable, curriculumCourses);
+        System.out.println("Curriculum Compactness Penalty Points: " + penaltyPoints);
+    }
+
+    // Method to calculate penalty points for Curriculum Compactness soft constraint
+    private static int calculateCurriculumCompactnessPenalty(
+            String[][][] timetable,
+            Map<String, List<String>> curriculumCourses
+    ) {
+        int penaltyPoints = 0;
+
+        for (List<String> courses : curriculumCourses.values()) {
+            int isolatedLecturesCount = 0;
+
+            for (String course : courses) {
+                boolean adjacent = false;
+                int lastPeriod = -1;
+
+                // Iterate through the timetable to find adjacent lectures
+                for (int day = 0; day < timetable.length; day++) {
+                    for (int period = 0; period < timetable[0].length; period++) {
+                        for (int room = 0; room < timetable[0][0].length; room++) {
+                            if (course.equals(timetable[day][period][room])) {
+                                if (lastPeriod == -1) {
+                                    lastPeriod = period;
+                                } else if (lastPeriod + 1 == period) {
+                                    adjacent = true;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // Count isolated lectures and update penalty points
+                if (!adjacent) {
+                    isolatedLecturesCount++;
+                }
+            }
+
+            // Update penalty points based on isolated lectures count
+            penaltyPoints += isolatedLecturesCount * 2;
+        }
+
+        return penaltyPoints;
+    }
+}
+
+import java.util.*;
+
+public class CurriculumCompactnessChecker {
+
+    public static void main(String[] args) {
+        // Sample timetable data (timetable should be represented in your actual program)
+        String[][][] timetable = new String[5][6][6]; // [days][periods_per_day][rooms]
+
+        // Sample curriculum data (you should have your curriculum information)
+        Map<String, List<String>> curriculumCourses = new HashMap<>();
+        curriculumCourses.put("q000", Arrays.asList("c0001", "c0002"));
+        curriculumCourses.put("q001", Arrays.asList("c0014", "c0015", "c0016", "c0017"));
+
+        int penaltyPoints = calculateCurriculumCompactnessPenalty(timetable, curriculumCourses);
+        System.out.println("Curriculum Compactness Penalty Points: " + penaltyPoints);
+    }
+
+    // Method to calculate penalty points for Curriculum Compactness soft constraint
+    private static int calculateCurriculumCompactnessPenalty(
+            String[][][] timetable,
+            Map<String, List<String>> curriculumCourses
+    ) {
+        int penaltyPoints = 0;
+
+        for (List<String> courses : curriculumCourses.values()) {
+            for (String course : courses) {
+                int isolatedLecturesCount = 0;
+                int lastDay = -1;
+                int lastPeriod = -1;
+
+                // Iterate through the timetable to find adjacent lectures within the same curriculum
+                for (int day = 0; day < timetable.length; day++) {
+                    for (int period = 0; period < timetable[0].length; period++) {
+                        for (int room = 0; room < timetable[0][0].length; room++) {
+                            if (course.equals(timetable[day][period][room])) {
+                                if (lastDay == -1 || lastDay == day && lastPeriod + 1 == period) {
+                                    lastDay = day;
+                                    lastPeriod = period;
+                                } else {
+                                    isolatedLecturesCount++;
+                                    lastDay = day;
+                                    lastPeriod = period;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // Update penalty points based on isolated lectures count
+                penaltyPoints += isolatedLecturesCount * 2;
+            }
+        }
+
+        return penaltyPoints;
+    }
+}
+

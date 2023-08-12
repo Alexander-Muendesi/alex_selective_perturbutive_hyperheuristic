@@ -3,11 +3,14 @@ package data_classes;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class DataReader {
     public int numCourses,  numRooms,  numDays,  periodsPerDay,  numCurricula,  numConstraints;
     public List<Course> courses;
+    public Map<String,Course> coursesMap;
     public List<Room> rooms;
     public List<Curriculum> curricula;
     public List<Constraint> constraints;
@@ -27,6 +30,7 @@ public class DataReader {
         this.rooms = new ArrayList<Room>();
         this.curricula = new ArrayList<Curriculum>();
         this.constraints = new ArrayList<Constraint>();
+        this.coursesMap = new HashMap<String, Course>();
 
         readFile();
     }
@@ -90,8 +94,10 @@ public class DataReader {
                     else if(data.get(0).equals("END.")){
                         constraints = false;
                     }
-                    else if(courses)
+                    else if(courses){
                         this.courses.add(new Course(data.get(0), data.get(1), Integer.parseInt(data.get(2)), Integer.parseInt(data.get(3)), Integer.parseInt(data.get(4))));
+                        this.coursesMap.put(data.get(0), this.courses.get(this.courses.size()-1));
+                    }
                     else if(rooms)
                         this.rooms.add(new Room(data.get(0), Integer.parseInt(data.get(1))));
                     else if(curricula){
