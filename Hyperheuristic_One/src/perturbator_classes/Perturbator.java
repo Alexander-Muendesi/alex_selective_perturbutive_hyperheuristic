@@ -56,7 +56,7 @@ public class Perturbator {
         int numIterations = 0;
         double bestFitness = timetable.calculateFitness();
 
-        while(true){//change this stopping condition later
+        while(true){//change this stopping condition later. Thinking a 30 period moving average of fitness of timetable
             //heuristic selection
             Heuristic heuristic = null;
             if(numIterations < numInvocations){
