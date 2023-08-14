@@ -15,7 +15,7 @@ public abstract class Heuristic {
     protected Random random;
     protected DataReader reader;
     protected Constraints constraints;
-    protected int rank;//smaller values are considered better??
+    protected double rank;//smaller values are considered better??
     protected int timeIndex;
     protected int fitnessIndex;
     protected int numInvocations;
@@ -100,9 +100,10 @@ public abstract class Heuristic {
         //TODO: verify you are interpreting those summations correctly
         double f1 = calculateF1();
         double f2 = calculateF2(heuristics);
-        double f3 = delta * (System.currentTimeMillis() - lastApplicationTime);
+        double f3 = delta * ((System.currentTimeMillis() - lastApplicationTime) / 1000);//since we want CPU seconds an not milliseonds
 
-        return f1 + f2 + f3;
+        this.rank = f1 + f2 + f3;
+        return rank;
     }
 
     /**

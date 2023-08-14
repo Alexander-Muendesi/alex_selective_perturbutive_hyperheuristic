@@ -35,6 +35,15 @@ public class App {
     }
 }
 
+/*
+ * Range of values to consider for parameters
+ * ThresholdAdaptationFactor: [0.95, 0.99]
+ * Threshold: [0.01, 0.9]
+ * IterationLimit: [1000, 20 000]//was 10 000 initially
+ * alpha, beta: [0,1]
+ * num invocations: [5,50]//was 20 originally
+ * delta: [0.5, 1.0]//suppossedly a good range for exploration and exploitation. for more exploration use 1.0 to 2.0. for more exploitation use 0.1 to 0.5
+ */
 
 
 

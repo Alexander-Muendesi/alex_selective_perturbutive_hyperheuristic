@@ -93,7 +93,7 @@ public class Timetable {
      * @param timetable
      */
     public void setTimetable(String[][][] timetable){
-        this.timetable = timetable;
+        this.timetable = getTimetableCopy(timetable);
     }
 
     public String[][][] getTimetable(){
