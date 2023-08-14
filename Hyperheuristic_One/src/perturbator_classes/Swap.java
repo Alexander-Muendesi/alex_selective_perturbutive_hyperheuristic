@@ -9,9 +9,12 @@ public class Swap extends Heuristic{
      * @param n num invocations
      * @param random random number generator
      * @param reader data reader
+     * @param alpha
+     * @param beta
+     * @param delta
      */
-    public Swap(int n, Random random, DataReader reader){
-        super(n, random, reader);
+    public Swap(int n, Random random, DataReader reader, double alpha, double beta, double delta){
+        super(n, random, reader, alpha, beta, delta);
     }
 
     /**

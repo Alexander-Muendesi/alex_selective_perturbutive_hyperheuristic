@@ -1,5 +1,9 @@
 package constructor_classes;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+
 import constraints.Constraints;
 import data_classes.Course;
 import data_classes.Curriculum;
@@ -14,7 +18,7 @@ public class Timetable {
     private final Constraints constraints;
 
     public Timetable(String[][][] timetable, DataReader reader){
-        this.timetable = timetable;
+        this.timetable = getTimetableCopy(timetable);
         fitness = Integer.MAX_VALUE;
         hardConstraintCost = Integer.MAX_VALUE;
         softConstraintCost = Integer.MAX_VALUE;
@@ -59,13 +63,27 @@ public class Timetable {
      * @return Soft constraint cost
      */
     public int calculateSoftConstraintCost(){
+        int cost = 0;
         //TODO: Multi-threading should be very efficient here since we are just doig read only. 1 thread per cost
+        // ExecutorService executorService = Executors.newFixedThreadPool(4);
+        // Future<Integer> future1 = executorService.submit(() -> constraints.roomCapacityConstraintCost(timetable));
+        // Future<Integer> future2 = executorService.submit(() -> constraints.minimumWorkingDaysConstraintCost(timetable));
+        // Future<Integer> future3 = executorService.submit(() -> constraints.curriculumCompactnessCost(timetable));
+        // Future<Integer> future4 = executorService.submit(() -> constraints.roomStabilityConstraintCost(timetable));
+        // executorService.shutdown();
+        // try{
+        //     cost = future1.get() + future2.get() + future3.get() + future4.get();
+        // }
+        // catch(Exception e){
+        //     e.printStackTrace();
+        // }
+        
         int roomCapacityConstraintCost = constraints.roomCapacityConstraintCost(timetable);
         int minimumWorkingDaysConstraintCost = constraints.minimumWorkingDaysConstraintCost(timetable);
         int curriculumCompactnessCost = constraints.curriculumCompactnessCost(timetable);
         int roomStabilityConstraintCost = constraints.roomStabilityConstraintCost(timetable);
 
-        int cost = roomCapacityConstraintCost + minimumWorkingDaysConstraintCost + curriculumCompactnessCost + roomStabilityConstraintCost;
+        cost = roomCapacityConstraintCost + minimumWorkingDaysConstraintCost + curriculumCompactnessCost + roomStabilityConstraintCost;
         return cost;
     }
 

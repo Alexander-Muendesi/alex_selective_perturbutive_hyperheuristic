@@ -1,6 +1,7 @@
 import java.util.Random;
 
 import constructor_classes.Solutions;
+import constructor_classes.Timetable;
 import data_classes.Course;
 import data_classes.DataReader;
 import perturbator_classes.Swap;
@@ -28,13 +29,9 @@ public class App {
         DataReader reader = new DataReader(1);
 
         Solutions s = new Solutions(reader, random);
-        s.generateSolution();
-        s.printTimetable();
-        
-        System.out.println("------------------------------------------------------------------------");
-        AllocateDeallocate swap = new AllocateDeallocate(5, random, reader);
-        s.timetable = swap.executeHeuristic(s.timetable);
-        s.printTimetable();
+        Timetable timetable = new Timetable(s.generateSolution(), reader);
+
+        System.out.println(timetable.calculateFitness());
     }
 }
 

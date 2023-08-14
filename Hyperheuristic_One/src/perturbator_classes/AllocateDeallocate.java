@@ -8,12 +8,15 @@ public class AllocateDeallocate extends Heuristic{
 
     /**
      * 
-     * @param n
+     * @param n num invocations
      * @param random
      * @param reader
+     * @param alpha
+     * @param beta
+     * @param delta
      */
-    public AllocateDeallocate(int n, Random random, DataReader reader){
-        super(n,random,reader);
+    public AllocateDeallocate(int n, Random random, DataReader reader, double alpha, double beta, double delta){
+        super(n,random,reader, alpha, beta, delta);
     }
     
     /**

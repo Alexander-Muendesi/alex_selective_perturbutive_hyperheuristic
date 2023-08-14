@@ -1,7 +1,5 @@
 package perturbator_classes;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 import data_classes.DataReader;
 
@@ -13,9 +11,12 @@ public class SwapRow extends Heuristic {
      * @param n number of invocations
      * @param random
      * @param reader
+     * @param alpha
+     * @param beta
+     * @param delta
      */
-    public SwapRow(int n, Random random, DataReader reader){
-        super(n, random, reader);
+    public SwapRow(int n, Random random, DataReader reader, double alpha, double beta, double delta){
+        super(n, random, reader, alpha, beta, delta);
     }
 
     public String[][][] executeHeuristic(String[][][] timetable){
