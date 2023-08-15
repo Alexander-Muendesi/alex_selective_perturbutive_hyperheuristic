@@ -55,8 +55,16 @@ public class Perturbator {
         Timetable copyTimetable = new Timetable(timetable.getTimetable(),reader); 
         int numIterations = 0;
         double bestFitness = timetable.calculateFitness();
+        List<Double> movingAverage = new ArrayList<Double>();
+        double prevAverage = -1;
+        int movingAverageIterations = 1;
+        double stopCounter = 0;
+        double result  = 0;
 
-        while(true){//change this stopping condition later. Thinking a 30 period moving average of fitness of timetable
+        int c = 1;
+        while(true && numIterations < 100000){//change this stopping condition later. Thinking a 30 period moving average of fitness of timetable
+            if(numIterations % 1000 == 0)
+                System.out.println(c++ + ": Best fitness: " + bestFitness);
             //heuristic selection
             Heuristic heuristic = null;
             if(numIterations < numInvocations){
@@ -115,7 +123,38 @@ public class Perturbator {
             if(currentFitness >= bestFitness){//adapt the threshold if there is no improvement in fitness
                 thresholdValue *= thresholdAdaptationFactor;
             }
+
+            movingAverage.add(bestFitness);
+
+            //stopping condition stuff
+            if(numIterations > numInvocations && movingAverageIterations % 12 == 0){
+                double denominator = 12;
+                double average = 0;
+
+                for(double val: movingAverage)
+                    average += val;
+                average = average / denominator;
+                // System.out.println("average: " + average + " previous average: " + prevAverage);
+
+                if(prevAverage == -1)
+                    prevAverage = average;
+                else{
+                    if(Math.abs(prevAverage - average) < 0.1){
+                        stopCounter++;
+                    }
+                    else{
+                        // System.out.println("difference: " + Math.abs(prevAverage - average));
+                        prevAverage = average;
+                    }
+                }
+                movingAverageIterations = 1;
+                movingAverage.clear();
+            }
+            if(numIterations >= numInvocations)
+                movingAverageIterations++;
             numIterations++;
+            result = bestFitness;
         }
+        System.out.println("result: " + result);
     }
 }

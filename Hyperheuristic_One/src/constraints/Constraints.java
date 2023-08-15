@@ -116,7 +116,8 @@ public class Constraints {
                 }
             }
         }
-        return cost;
+
+        return (cost == -1) ? 0 : cost;
     }
 
     /**
@@ -168,7 +169,7 @@ public class Constraints {
             }
         }
 
-        return cost;
+        return (cost == -1) ? 0 : cost;
     }
 
     /**

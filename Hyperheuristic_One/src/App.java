@@ -6,6 +6,7 @@ import data_classes.Course;
 import data_classes.DataReader;
 import perturbator_classes.Swap;
 import perturbator_classes.AllocateDeallocate;
+import perturbator_classes.Perturbator;
 import perturbator_classes.AllocateDeallocate;
 
 public class App {
@@ -27,11 +28,14 @@ public class App {
 
         Random random = new Random(0);
         DataReader reader = new DataReader(1);
+        int numInvocations = 25;
+        double alpha = 0.1, beta = 0.9, delta = 0.5;//delta was 0.9 b4/0.5 seems to be best for now
+        int iterationLimit = 20000;
+        double thresholdValue = 0.01, thresholdAdaptationFactor = 0.9;
 
-        Solutions s = new Solutions(reader, random);
-        Timetable timetable = new Timetable(s.generateSolution(), reader);
-
-        System.out.println(timetable.calculateFitness());
+        Perturbator p = new Perturbator(random, reader, numInvocations, alpha, beta, delta, iterationLimit, thresholdValue, thresholdAdaptationFactor);
+        p.execute();
+        
     }
 }
 
