@@ -28,13 +28,34 @@ public class App {
 
         Random random = new Random(0);
         DataReader reader = new DataReader(1);
-        int numInvocations = 25;
-        double alpha = 0.1, beta = 0.9, delta = 0.5;//delta was 0.9 b4/0.5 seems to be best for now
-        int iterationLimit = 20000;
-        double thresholdValue = 0.01, thresholdAdaptationFactor = 0.9;
+        int numInvocations = 26;
+        double alpha = 0.6953194531250001, beta = 0.335940859375, delta = 1.836727890625;//delta was 0.9 b4/0.5 seems to be best for now
+        int iterationLimit = 7085;
+        double thresholdValue = 0.5585859375, thresholdAdaptationFactor = 0.8367421875;
 
         Perturbator p = new Perturbator(random, reader, numInvocations, alpha, beta, delta, iterationLimit, thresholdValue, thresholdAdaptationFactor);
         p.execute();
+
+        // SobolReader s = new SobolReader();
+        // Double[] params = null;
+        // int skip = 0;
+
+        // while((params = s.getParams()) != null){
+        //     if(skip != 0 && skip > 11){
+        //         System.out.println(skip + ": ");
+    
+        //         for (Double val : params) {
+        //             System.out.print(val + " ");
+        //         }
+        //         System.out.println();
+        //         Random random = new Random(0);
+        //         DataReader reader = new DataReader(1);
+
+        //         Perturbator p = new Perturbator(random, reader, (int)params[0].intValue(), params[1], params[2], params[3], params[4].intValue(), params[5], params[6]);
+        //         p.execute();
+        //     }
+        //     skip++;
+        // }
         
     }
 }

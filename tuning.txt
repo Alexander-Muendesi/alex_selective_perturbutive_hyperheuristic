@@ -1,0 +1,1757 @@
+1: 
+27.5 0.500005 0.500005 1.050005 10500.0 0.5045 0.5045 
+1: Best fitness: 2223.0
+2: Best fitness: 97.0
+3: Best fitness: 68.0
+4: Best fitness: 58.0
+5: Best fitness: 58.0
+6: Best fitness: 58.0
+7: Best fitness: 58.0
+8: Best fitness: 58.0
+9: Best fitness: 58.0
+10: Best fitness: 58.0
+result: 58.0
+2: 
+38.75 0.2500025 0.2500025 0.5750025 15250.0 0.75175 0.25725 
+1: Best fitness: 2223.0
+2: Best fitness: 1619.0
+3: Best fitness: 142.0
+4: Best fitness: 100.0
+5: Best fitness: 96.0
+6: Best fitness: 95.0
+7: Best fitness: 93.0
+8: Best fitness: 91.0
+9: Best fitness: 89.0
+10: Best fitness: 89.0
+result: 88.0
+3: 
+16.25 0.7500075 0.7500075 1.5250075 5750.0 0.25725 0.75175 
+1: Best fitness: 2223.0
+2: Best fitness: 153.0
+3: Best fitness: 120.0
+4: Best fitness: 119.0
+5: Best fitness: 118.0
+6: Best fitness: 117.0
+7: Best fitness: 117.0
+8: Best fitness: 117.0
+9: Best fitness: 117.0
+10: Best fitness: 117.0
+result: 117.0
+4: 
+21.875 0.37500375 0.62500625 1.76250875 8125.0 0.133625 0.380875 
+1: Best fitness: 2223.0
+2: Best fitness: 104.0
+3: Best fitness: 96.0
+4: Best fitness: 95.0
+5: Best fitness: 83.0
+6: Best fitness: 60.0
+7: Best fitness: 60.0
+8: Best fitness: 57.0
+9: Best fitness: 56.0
+10: Best fitness: 56.0
+result: 55.0
+5: 
+44.375 0.8750087500000001 0.12500125 0.81250375 17625.0 0.628125 0.875375 
+1: Best fitness: 2223.0
+2: Best fitness: 1778.0
+3: Best fitness: 153.0
+4: Best fitness: 94.0
+5: Best fitness: 70.0
+6: Best fitness: 70.0
+7: Best fitness: 70.0
+8: Best fitness: 70.0
+9: Best fitness: 67.0
+10: Best fitness: 63.0
+result: 56.0
+6: 
+33.125 0.12500125 0.8750087500000001 1.28750625 12875.0 0.875375 0.133625 
+1: Best fitness: 2223.0
+2: Best fitness: 2114.0
+3: Best fitness: 2114.0
+7: 
+10.625 0.62500625 0.37500375 0.33750125 3375.0 0.380875 0.628125 
+1: Best fitness: 2223.0
+2: Best fitness: 355.0
+3: Best fitness: 355.0
+4: Best fitness: 355.0
+5: Best fitness: 355.0
+6: Best fitness: 355.0
+7: Best fitness: 355.0
+8: Best fitness: 355.0
+9: Best fitness: 355.0
+10: Best fitness: 355.0
+result: 355.0
+8: 
+13.4375 0.312503125 0.9375093750000001 0.931254375 11687.5 0.3190625 0.4426875 
+1: Best fitness: 2223.0
+2: Best fitness: 2132.0
+3: Best fitness: 2132.0
+4: Best fitness: 2132.0
+5: Best fitness: 2132.0
+6: Best fitness: 2132.0
+7: Best fitness: 2132.0
+8: Best fitness: 2132.0
+9: Best fitness: 2132.0
+10: Best fitness: 2132.0
+result: 2132.0
+9: 
+35.9375 0.812508125 0.43750437500000006 1.881259375 2187.5 0.8135625 0.9371875 
+1: Best fitness: 2223.0
+2: Best fitness: 533.0
+3: Best fitness: 493.0
+4: Best fitness: 123.0
+5: Best fitness: 83.0
+6: Best fitness: 78.0
+7: Best fitness: 76.0
+8: Best fitness: 69.0
+9: Best fitness: 63.0
+10: Best fitness: 62.0
+result: 61.0
+10: 
+47.1875 0.062500625 0.6875068750000001 0.456251875 6937.5 0.5663125 0.19543750000000001 
+1: Best fitness: 2223.0
+2: Best fitness: 1966.0
+3: Best fitness: 1966.0
+4: Best fitness: 1966.0
+5: Best fitness: 1966.0
+6: Best fitness: 1966.0
+7: Best fitness: 1966.0
+8: Best fitness: 1966.0
+9: Best fitness: 1966.0
+10: Best fitness: 1966.0
+result: 1966.0
+11: 
+24.6875 0.562505625 0.187501875 1.406256875 16437.5 0.0718125 0.6899375 
+1: Best fitness: 2223.0
+2: Best fitness: 440.0
+3: Best fitness: 440.0
+4: Best fitness: 440.0
+5: Best fitness: 440.0
+6: Best fitness: 440.0
+7: Best fitness: 440.0
+8: Best fitness: 440.0
+9: Best fitness: 440.0
+10: Best fitness: 440.0
+12: 
+19.0625 0.187501875 0.312503125 1.1687556250000002 18812.5 0.4426875 0.0718125 
+1: Best fitness: 1914.0
+2: Best fitness: 574.0
+3: Best fitness: 574.0
+4: Best fitness: 574.0
+5: Best fitness: 93.0
+6: Best fitness: 80.0
+7: Best fitness: 80.0
+8: Best fitness: 80.0
+9: Best fitness: 77.0
+10: Best fitness: 75.0
+result: 74.0
+13: 
+41.5625 0.6875068750000001 0.812508125 0.218750625 9312.5 0.9371875 0.5663125 
+1: Best fitness: 1914.0
+2: Best fitness: 128.0
+3: Best fitness: 100.0
+4: Best fitness: 68.0
+5: Best fitness: 61.0
+6: Best fitness: 57.0
+7: Best fitness: 57.0
+8: Best fitness: 57.0
+9: Best fitness: 57.0
+10: Best fitness: 56.0
+result: 53.0
+14: 
+30.3125 0.43750437500000006 0.062500625 1.6437581250000002 4562.5 0.6899375 0.3190625 
+1: Best fitness: 1914.0
+2: Best fitness: 138.0
+3: Best fitness: 114.0
+4: Best fitness: 75.0
+5: Best fitness: 66.0
+6: Best fitness: 63.0
+7: Best fitness: 62.0
+8: Best fitness: 61.0
+9: Best fitness: 61.0
+10: Best fitness: 51.0
+result: 51.0
+15: 
+7.8125 0.9375093750000001 0.562505625 0.693753125 14062.5 0.19543750000000001 0.8135625 
+1: Best fitness: 1914.0
+2: Best fitness: 1757.0
+3: Best fitness: 1757.0
+4: Best fitness: 1757.0
+5: Best fitness: 1757.0
+6: Best fitness: 1757.0
+7: Best fitness: 1757.0
+8: Best fitness: 1757.0
+9: Best fitness: 1757.0
+10: Best fitness: 1757.0
+result: 1757.0
+16: 
+9.21875 0.46875468750000004 0.46875468750000004 1.3468815625000001 6343.75 0.96809375 0.53540625 
+1: Best fitness: 1914.0
+2: Best fitness: 167.0
+3: Best fitness: 167.0
+4: Best fitness: 167.0
+5: Best fitness: 167.0
+6: Best fitness: 167.0
+7: Best fitness: 167.0
+8: Best fitness: 167.0
+9: Best fitness: 167.0
+10: Best fitness: 167.0
+result: 167.0
+17: 
+31.71875 0.9687596875000001 0.9687596875000001 0.39687656250000003 15843.75 0.47359375 0.04090625 
+1: Best fitness: 1914.0
+2: Best fitness: 186.0
+3: Best fitness: 122.0
+4: Best fitness: 121.0
+5: Best fitness: 121.0
+6: Best fitness: 121.0
+7: Best fitness: 121.0
+8: Best fitness: 121.0
+9: Best fitness: 121.0
+10: Best fitness: 121.0
+result: 121.0
+18: 
+42.96875 0.21875218750000003 0.21875218750000003 1.8218840625000001 11093.75 0.22634375 0.78265625 
+1: Best fitness: 1914.0
+2: Best fitness: 448.0
+3: Best fitness: 159.0
+4: Best fitness: 159.0
+5: Best fitness: 159.0
+6: Best fitness: 159.0
+7: Best fitness: 159.0
+8: Best fitness: 159.0
+9: Best fitness: 159.0
+10: Best fitness: 159.0
+result: 159.0
+19: 
+20.46875 0.7187571875000001 0.7187571875000001 0.8718790625 1593.75 0.72084375 0.28815625 
+1: Best fitness: 1914.0
+2: Best fitness: 1713.0
+3: Best fitness: 182.0
+4: Best fitness: 100.0
+5: Best fitness: 99.0
+6: Best fitness: 99.0
+7: Best fitness: 99.0
+8: Best fitness: 99.0
+9: Best fitness: 99.0
+10: Best fitness: 99.0
+result: 99.0
+20: 
+26.09375 0.0937509375 0.8437584375 0.6343778125 3968.75 0.84446875 0.90628125 
+1: Best fitness: 1914.0
+2: Best fitness: 1186.0
+3: Best fitness: 1169.0
+4: Best fitness: 1169.0
+5: Best fitness: 1169.0
+6: Best fitness: 1169.0
+7: Best fitness: 1169.0
+8: Best fitness: 1169.0
+9: Best fitness: 1169.0
+10: Best fitness: 1169.0
+result: 1169.0
+21: 
+48.59375 0.5937559375 0.34375343750000004 1.5843828125000001 13468.75 0.34996875 0.41178125 
+1: Best fitness: 1914.0
+2: Best fitness: 1394.0
+3: Best fitness: 136.0
+4: Best fitness: 96.0
+5: Best fitness: 67.0
+6: Best fitness: 61.0
+7: Best fitness: 56.0
+8: Best fitness: 55.0
+9: Best fitness: 55.0
+10: Best fitness: 51.0
+result: 51.0
+22: 
+37.34375 0.34375343750000004 0.5937559375 0.1593753125 18218.75 0.10271875 0.65903125 
+1: Best fitness: 1914.0
+2: Best fitness: 1619.0
+3: Best fitness: 1556.0
+4: Best fitness: 1524.0
+5: Best fitness: 1523.0
+6: Best fitness: 1521.0
+7: Best fitness: 1521.0
+8: Best fitness: 1521.0
+9: Best fitness: 1457.0
+10: Best fitness: 1455.0
+result: 1451.0
+23: 
+14.84375 0.8437584375 0.0937509375 1.1093803125000001 8718.75 0.59721875 0.16453125000000002 
+1: Best fitness: 1914.0
+2: Best fitness: 1322.0
+3: Best fitness: 1322.0
+4: Best fitness: 1322.0
+5: Best fitness: 1322.0
+6: Best fitness: 1322.0
+7: Best fitness: 1322.0
+8: Best fitness: 1322.0
+9: Best fitness: 1322.0
+10: Best fitness: 1322.0
+result: 1322.0
+24: 
+12.03125 0.1562515625 0.5312553125 1.7031334375 17031.25 0.65903125 0.96809375 
+1: Best fitness: 1914.0
+2: Best fitness: 1529.0
+3: Best fitness: 1529.0
+4: Best fitness: 1529.0
+5: Best fitness: 1529.0
+6: Best fitness: 1529.0
+7: Best fitness: 1529.0
+8: Best fitness: 1529.0
+9: Best fitness: 1529.0
+10: Best fitness: 1529.0
+result: 1529.0
+25: 
+34.53125 0.6562565625000001 0.0312503125 0.7531284374999999 7531.25 0.16453125000000002 0.47359375 
+1: Best fitness: 1914.0
+2: Best fitness: 419.0
+3: Best fitness: 194.0
+4: Best fitness: 155.0
+5: Best fitness: 128.0
+6: Best fitness: 101.0
+7: Best fitness: 71.0
+8: Best fitness: 68.0
+9: Best fitness: 63.0
+10: Best fitness: 63.0
+result: 63.0
+26: 
+45.78125 0.4062540625 0.7812578125 1.2281309375 2781.25 0.41178125 0.72084375 
+1: Best fitness: 1914.0
+2: Best fitness: 1737.0
+3: Best fitness: 181.0
+4: Best fitness: 90.0
+5: Best fitness: 72.0
+6: Best fitness: 63.0
+7: Best fitness: 60.0
+8: Best fitness: 54.0
+9: Best fitness: 51.0
+10: Best fitness: 51.0
+result: 51.0
+27: 
+23.28125 0.9062590625000001 0.2812528125 0.27812593750000003 12281.25 0.90628125 0.22634375 
+1: Best fitness: 1914.0
+2: Best fitness: 793.0
+3: Best fitness: 142.0
+4: Best fitness: 94.0
+5: Best fitness: 68.0
+6: Best fitness: 64.0
+7: Best fitness: 58.0
+8: Best fitness: 56.0
+9: Best fitness: 54.0
+10: Best fitness: 54.0
+result: 54.0
+28: 
+17.65625 0.2812528125 0.1562515625 0.5156271875 14656.25 0.53540625 0.59721875 
+1: Best fitness: 1914.0
+2: Best fitness: 849.0
+3: Best fitness: 849.0
+4: Best fitness: 849.0
+5: Best fitness: 849.0
+6: Best fitness: 849.0
+7: Best fitness: 849.0
+8: Best fitness: 849.0
+9: Best fitness: 849.0
+10: Best fitness: 849.0
+result: 849.0
+29: 
+40.15625 0.7812578125 0.6562565625000001 1.4656321875 5156.25 0.04090625 0.10271875 
+1: Best fitness: 1914.0
+2: Best fitness: 361.0
+3: Best fitness: 361.0
+4: Best fitness: 361.0
+5: Best fitness: 361.0
+6: Best fitness: 361.0
+7: Best fitness: 361.0
+8: Best fitness: 361.0
+9: Best fitness: 361.0
+10: Best fitness: 361.0
+result: 361.0
+30: 
+28.90625 0.0312503125 0.4062540625 0.9906296874999999 9906.25 0.28815625 0.84446875 
+1: Best fitness: 1914.0
+2: Best fitness: 83.0
+3: Best fitness: 67.0
+4: Best fitness: 62.0
+5: Best fitness: 56.0
+6: Best fitness: 54.0
+7: Best fitness: 54.0
+8: Best fitness: 53.0
+9: Best fitness: 52.0
+10: Best fitness: 51.0
+result: 50.0
+31: 
+6.40625 0.5312553125 0.9062590625000001 1.9406346875 19406.25 0.78265625 0.34996875 
+1: Best fitness: 1914.0
+2: Best fitness: 1344.0
+3: Best fitness: 1344.0
+4: Best fitness: 1344.0
+5: Best fitness: 1344.0
+6: Best fitness: 1344.0
+7: Best fitness: 1344.0
+8: Best fitness: 1344.0
+9: Best fitness: 1344.0
+10: Best fitness: 1344.0
+result: 1344.0
+32: 
+7.109375 0.26562765625 0.70313203125 1.13906796875 3671.875 0.921734375 0.798109375 
+1: Best fitness: 1914.0
+2: Best fitness: 105.0
+3: Best fitness: 80.0
+4: Best fitness: 80.0
+5: Best fitness: 79.0
+6: Best fitness: 79.0
+7: Best fitness: 79.0
+8: Best fitness: 79.0
+9: Best fitness: 77.0
+10: Best fitness: 77.0
+result: 76.0
+33: 
+29.609375 0.7656326562500001 0.20312703125 0.18906296875 13171.875 0.427234375 0.303609375 
+1: Best fitness: 1914.0
+2: Best fitness: 1246.0
+3: Best fitness: 302.0
+4: Best fitness: 201.0
+5: Best fitness: 139.0
+6: Best fitness: 126.0
+7: Best fitness: 124.0
+8: Best fitness: 97.0
+9: Best fitness: 71.0
+10: Best fitness: 71.0
+result: 63.0
+34: 
+40.859375 0.01562515625 0.95313453125 1.61407046875 17921.875 0.179984375 0.550859375 
+1: Best fitness: 1914.0
+2: Best fitness: 1851.0
+3: Best fitness: 1851.0
+4: Best fitness: 1851.0
+5: Best fitness: 1851.0
+6: Best fitness: 1851.0
+7: Best fitness: 1851.0
+8: Best fitness: 1851.0
+9: Best fitness: 1851.0
+10: Best fitness: 1851.0
+result: 1851.0
+35: 
+18.359375 0.5156301562500001 0.45312953125000005 0.6640654687499999 8421.875 0.674484375 0.056359375 
+1: Best fitness: 1914.0
+2: Best fitness: 599.0
+3: Best fitness: 599.0
+4: Best fitness: 599.0
+5: Best fitness: 599.0
+6: Best fitness: 599.0
+7: Best fitness: 599.0
+8: Best fitness: 599.0
+9: Best fitness: 599.0
+10: Best fitness: 599.0
+result: 599.0
+36: 
+23.984375 0.14062640625 0.07812578125 0.9015667187499999 6046.875 0.798109375 0.674484375 
+1: Best fitness: 1914.0
+2: Best fitness: 133.0
+3: Best fitness: 95.0
+4: Best fitness: 61.0
+5: Best fitness: 52.0
+6: Best fitness: 50.0
+7: Best fitness: 47.0
+8: Best fitness: 47.0
+9: Best fitness: 47.0
+10: Best fitness: 46.0
+result: 46.0
+37: 
+46.484375 0.64063140625 0.5781307812500001 1.85157171875 15546.875 0.303609375 0.179984375 
+1: Best fitness: 1914.0
+2: Best fitness: 165.0
+3: Best fitness: 151.0
+4: Best fitness: 151.0
+5: Best fitness: 148.0
+6: Best fitness: 146.0
+7: Best fitness: 145.0
+8: Best fitness: 145.0
+9: Best fitness: 145.0
+10: Best fitness: 145.0
+result: 145.0
+38: 
+35.234375 0.39062890625 0.32812828125000004 0.42656421874999995 10796.875 0.056359375 0.921734375 
+1: Best fitness: 1914.0
+2: Best fitness: 192.0
+3: Best fitness: 115.0
+4: Best fitness: 114.0
+5: Best fitness: 114.0
+6: Best fitness: 91.0
+7: Best fitness: 76.0
+8: Best fitness: 76.0
+9: Best fitness: 58.0
+10: Best fitness: 55.0
+result: 53.0
+39: 
+12.734375 0.89063390625 0.8281332812500001 1.37656921875 1296.875 0.550859375 0.427234375 
+1: Best fitness: 1914.0
+2: Best fitness: 408.0
+3: Best fitness: 408.0
+4: Best fitness: 408.0
+5: Best fitness: 408.0
+6: Best fitness: 408.0
+7: Best fitness: 408.0
+8: Best fitness: 408.0
+9: Best fitness: 408.0
+10: Best fitness: 408.0
+result: 408.0
+40: 
+15.546875 0.07812578125 0.26562765625 1.9703223437500001 14359.375 0.736296875 0.736296875 
+1: Best fitness: 1914.0
+2: Best fitness: 1220.0
+3: Best fitness: 1217.0
+4: Best fitness: 1217.0
+5: Best fitness: 1217.0
+6: Best fitness: 1217.0
+7: Best fitness: 1217.0
+8: Best fitness: 1217.0
+9: Best fitness: 1217.0
+10: Best fitness: 1217.0
+result: 1217.0
+41: 
+38.046875 0.5781307812500001 0.7656326562500001 1.02031734375 4859.375 0.241796875 0.241796875 
+1: Best fitness: 1914.0
+2: Best fitness: 1600.0
+3: Best fitness: 261.0
+4: Best fitness: 71.0
+5: Best fitness: 69.0
+6: Best fitness: 67.0
+7: Best fitness: 67.0
+8: Best fitness: 65.0
+9: Best fitness: 59.0
+10: Best fitness: 59.0
+result: 59.0
+42: 
+49.296875 0.32812828125000004 0.01562515625 1.4953198437500002 9609.375 0.489046875 0.983546875 
+1: Best fitness: 1914.0
+2: Best fitness: 136.0
+3: Best fitness: 87.0
+4: Best fitness: 79.0
+5: Best fitness: 67.0
+6: Best fitness: 65.0
+7: Best fitness: 65.0
+8: Best fitness: 64.0
+9: Best fitness: 63.0
+10: Best fitness: 59.0
+result: 58.0
+43: 
+26.796875 0.8281332812500001 0.5156301562500001 0.54531484375 19109.375 0.983546875 0.489046875 
+1: Best fitness: 1914.0
+2: Best fitness: 814.0
+3: Best fitness: 444.0
+4: Best fitness: 437.0
+5: Best fitness: 437.0
+6: Best fitness: 437.0
+7: Best fitness: 437.0
+8: Best fitness: 437.0
+9: Best fitness: 437.0
+10: Best fitness: 437.0
+result: 437.0
+44: 
+21.171875 0.45312953125000005 0.89063390625 0.30781359375 16734.375 0.612671875 0.859921875 
+1: Best fitness: 1914.0
+2: Best fitness: 397.0
+3: Best fitness: 395.0
+4: Best fitness: 380.0
+5: Best fitness: 308.0
+6: Best fitness: 308.0
+7: Best fitness: 266.0
+8: Best fitness: 263.0
+9: Best fitness: 259.0
+10: Best fitness: 256.0
+result: 256.0
+45: 
+43.671875 0.95313453125 0.39062890625 1.2578185937500002 7234.375 0.118171875 0.365421875 
+1: Best fitness: 1914.0
+2: Best fitness: 249.0
+3: Best fitness: 183.0
+4: Best fitness: 142.0
+5: Best fitness: 126.0
+6: Best fitness: 116.0
+7: Best fitness: 107.0
+8: Best fitness: 102.0
+9: Best fitness: 101.0
+10: Best fitness: 100.0
+result: 98.0
+46: 
+32.421875 0.20312703125 0.64063140625 0.7828160937499999 2484.375 0.365421875 0.612671875 
+1: Best fitness: 1914.0
+2: Best fitness: 125.0
+3: Best fitness: 94.0
+4: Best fitness: 72.0
+5: Best fitness: 63.0
+6: Best fitness: 55.0
+7: Best fitness: 50.0
+8: Best fitness: 49.0
+9: Best fitness: 49.0
+10: Best fitness: 48.0
+result: 48.0
+47: 
+9.921875 0.70313203125 0.14062640625 1.7328210937500002 11984.375 0.859921875 0.118171875 
+1: Best fitness: 1914.0
+2: Best fitness: 188.0
+3: Best fitness: 112.0
+4: Best fitness: 80.0
+5: Best fitness: 71.0
+6: Best fitness: 67.0
+7: Best fitness: 64.0
+8: Best fitness: 60.0
+9: Best fitness: 55.0
+10: Best fitness: 53.0
+result: 49.0
+48: 
+8.515625 0.23437734375000002 0.7968829687500001 0.36718890625 9015.625 0.087265625 0.272703125 
+1: Best fitness: 1914.0
+2: Best fitness: 1280.0
+3: Best fitness: 1110.0
+4: Best fitness: 802.0
+5: Best fitness: 796.0
+6: Best fitness: 796.0
+7: Best fitness: 796.0
+8: Best fitness: 796.0
+9: Best fitness: 796.0
+10: Best fitness: 796.0
+result: 796.0
+49: 
+31.015625 0.73438234375 0.29687796875 1.31719390625 18515.625 0.581765625 0.767203125 
+1: Best fitness: 1914.0
+2: Best fitness: 209.0
+3: Best fitness: 209.0
+4: Best fitness: 121.0
+5: Best fitness: 91.0
+6: Best fitness: 90.0
+7: Best fitness: 79.0
+8: Best fitness: 69.0
+9: Best fitness: 65.0
+10: Best fitness: 63.0
+result: 61.0
+50: 
+42.265625 0.48437984375000004 0.5468804687500001 0.84219140625 13765.625 0.829015625 0.025453125 
+1: Best fitness: 1914.0
+2: Best fitness: 824.0
+3: Best fitness: 85.0
+4: Best fitness: 65.0
+5: Best fitness: 65.0
+6: Best fitness: 65.0
+7: Best fitness: 63.0
+8: Best fitness: 59.0
+9: Best fitness: 57.0
+10: Best fitness: 54.0
+result: 50.0
+51: 
+19.765625 0.98438484375 0.04687546875 1.79219640625 4265.625 0.334515625 0.519953125 
+1: Best fitness: 1914.0
+2: Best fitness: 104.0
+3: Best fitness: 80.0
+4: Best fitness: 77.0
+5: Best fitness: 77.0
+6: Best fitness: 75.0
+7: Best fitness: 73.0
+8: Best fitness: 65.0
+9: Best fitness: 65.0
+10: Best fitness: 56.0
+result: 55.0
+52: 
+25.390625 0.35937859375000003 0.42187921875 1.55469515625 1890.625 0.210890625 0.149078125 
+1: Best fitness: 1914.0
+2: Best fitness: 1129.0
+3: Best fitness: 1129.0
+4: Best fitness: 1129.0
+5: Best fitness: 1129.0
+6: Best fitness: 1129.0
+7: Best fitness: 1129.0
+8: Best fitness: 1129.0
+9: Best fitness: 1129.0
+10: Best fitness: 1129.0
+result: 1129.0
+53: 
+47.890625 0.8593835937500001 0.92188421875 0.60469015625 11390.625 0.705390625 0.643578125 
+1: Best fitness: 1914.0
+2: Best fitness: 1883.0
+3: Best fitness: 1883.0
+4: Best fitness: 163.0
+5: Best fitness: 163.0
+6: Best fitness: 163.0
+7: Best fitness: 163.0
+8: Best fitness: 163.0
+9: Best fitness: 163.0
+10: Best fitness: 163.0
+result: 163.0
+54: 
+36.640625 0.10937609375000001 0.17187671875000002 1.07969265625 16140.625 0.952640625 0.39632812500000003 
+1: Best fitness: 1914.0
+2: Best fitness: 1133.0
+3: Best fitness: 326.0
+4: Best fitness: 75.0
+5: Best fitness: 75.0
+6: Best fitness: 74.0
+7: Best fitness: 74.0
+8: Best fitness: 74.0
+9: Best fitness: 74.0
+10: Best fitness: 74.0
+result: 74.0
+55: 
+14.140625 0.60938109375 0.67188171875 0.12968765625 6640.625 0.458140625 0.890828125 
+1: Best fitness: 1914.0
+2: Best fitness: 161.0
+3: Best fitness: 114.0
+4: Best fitness: 112.0
+5: Best fitness: 111.0
+6: Best fitness: 107.0
+7: Best fitness: 106.0
+8: Best fitness: 102.0
+9: Best fitness: 101.0
+10: Best fitness: 99.0
+result: 99.0
+56: 
+11.328125 0.42187921875 0.23437734375000002 0.72344078125 19703.125 0.272703125 0.210890625 
+1: Best fitness: 1914.0
+2: Best fitness: 179.0
+3: Best fitness: 95.0
+4: Best fitness: 93.0
+5: Best fitness: 76.0
+6: Best fitness: 71.0
+7: Best fitness: 65.0
+8: Best fitness: 63.0
+9: Best fitness: 63.0
+10: Best fitness: 63.0
+result: 63.0
+57: 
+33.828125 0.92188421875 0.73438234375 1.67344578125 10203.125 0.767203125 0.705390625 
+1: Best fitness: 1914.0
+2: Best fitness: 425.0
+3: Best fitness: 425.0
+4: Best fitness: 425.0
+5: Best fitness: 425.0
+6: Best fitness: 425.0
+7: Best fitness: 425.0
+8: Best fitness: 425.0
+9: Best fitness: 425.0
+10: Best fitness: 425.0
+result: 425.0
+58: 
+45.078125 0.17187671875000002 0.48437984375000004 0.24843828125 5453.125 0.519953125 0.458140625 
+1: Best fitness: 1914.0
+2: Best fitness: 1063.0
+3: Best fitness: 1063.0
+4: Best fitness: 1047.0
+5: Best fitness: 1047.0
+6: Best fitness: 1000.0
+7: Best fitness: 1000.0
+8: Best fitness: 985.0
+9: Best fitness: 985.0
+10: Best fitness: 985.0
+result: 943.0
+59: 
+22.578125 0.67188171875 0.98438484375 1.19844328125 14953.125 0.025453125 0.952640625 
+1: Best fitness: 1914.0
+2: Best fitness: 102.0
+3: Best fitness: 80.0
+4: Best fitness: 54.0
+5: Best fitness: 50.0
+6: Best fitness: 48.0
+7: Best fitness: 48.0
+8: Best fitness: 48.0
+9: Best fitness: 48.0
+10: Best fitness: 47.0
+result: 46.0
+60: 
+16.953125 0.04687546875 0.60938109375 1.43594453125 12578.125 0.39632812500000003 0.334515625 
+1: Best fitness: 1914.0
+2: Best fitness: 1006.0
+3: Best fitness: 885.0
+4: Best fitness: 856.0
+5: Best fitness: 856.0
+6: Best fitness: 856.0
+7: Best fitness: 856.0
+8: Best fitness: 856.0
+9: Best fitness: 856.0
+10: Best fitness: 856.0
+result: 856.0
+61: 
+39.453125 0.5468804687500001 0.10937609375000001 0.48593953125 3078.125 0.890828125 0.829015625 
+1: Best fitness: 1914.0
+2: Best fitness: 376.0
+3: Best fitness: 147.0
+4: Best fitness: 129.0
+5: Best fitness: 127.0
+6: Best fitness: 127.0
+7: Best fitness: 113.0
+8: Best fitness: 78.0
+9: Best fitness: 75.0
+10: Best fitness: 70.0
+result: 70.0
+62: 
+28.203125 0.29687796875 0.8593835937500001 1.91094703125 7828.125 0.643578125 0.087265625 
+1: Best fitness: 1914.0
+2: Best fitness: 167.0
+3: Best fitness: 98.0
+4: Best fitness: 94.0
+5: Best fitness: 89.0
+6: Best fitness: 89.0
+7: Best fitness: 89.0
+8: Best fitness: 89.0
+9: Best fitness: 89.0
+10: Best fitness: 89.0
+result: 89.0
+63: 
+5.703125 0.7968829687500001 0.35937859375000003 0.96094203125 17328.125 0.149078125 0.581765625 
+1: Best fitness: 1914.0
+2: Best fitness: 225.0
+3: Best fitness: 157.0
+4: Best fitness: 117.0
+5: Best fitness: 109.0
+6: Best fitness: 69.0
+7: Best fitness: 62.0
+8: Best fitness: 59.0
+9: Best fitness: 52.0
+10: Best fitness: 49.0
+result: 47.0
+64: 
+6.0546875 0.39844148437500004 0.820320703125 1.6882896093750002 13320.3125 0.4504140625 0.6667578125 
+1: Best fitness: 1914.0
+2: Best fitness: 171.0
+3: Best fitness: 127.0
+4: Best fitness: 97.0
+5: Best fitness: 93.0
+6: Best fitness: 82.0
+7: Best fitness: 77.0
+8: Best fitness: 73.0
+9: Best fitness: 73.0
+10: Best fitness: 73.0
+result: 73.0
+65: 
+28.5546875 0.8984464843750001 0.320315703125 0.738284609375 3820.3125 0.9449140625 0.1722578125 
+1: Best fitness: 1914.0
+2: Best fitness: 174.0
+3: Best fitness: 69.0
+4: Best fitness: 58.0
+5: Best fitness: 54.0
+6: Best fitness: 54.0
+7: Best fitness: 54.0
+8: Best fitness: 54.0
+9: Best fitness: 54.0
+10: Best fitness: 52.0
+result: 47.0
+66: 
+39.8046875 0.148438984375 0.570318203125 1.2132871093750002 8570.3125 0.6976640625 0.9140078125 
+1: Best fitness: 1914.0
+2: Best fitness: 982.0
+3: Best fitness: 978.0
+4: Best fitness: 773.0
+5: Best fitness: 767.0
+6: Best fitness: 767.0
+7: Best fitness: 767.0
+8: Best fitness: 767.0
+9: Best fitness: 766.0
+10: Best fitness: 764.0
+result: 764.0
+67: 
+17.3046875 0.6484439843750001 0.070313203125 0.26328210937499996 18070.3125 0.20316406250000002 0.4195078125 
+1: Best fitness: 1914.0
+2: Best fitness: 301.0
+3: Best fitness: 142.0
+4: Best fitness: 71.0
+5: Best fitness: 64.0
+6: Best fitness: 62.0
+7: Best fitness: 60.0
+8: Best fitness: 56.0
+9: Best fitness: 54.0
+10: Best fitness: 54.0
+result: 53.0
+68: 
+22.9296875 0.023437734375 0.445316953125 0.500783359375 15695.3125 0.3267890625 0.7903828125 
+1: Best fitness: 1914.0
+2: Best fitness: 1201.0
+3: Best fitness: 1201.0
+4: Best fitness: 1201.0
+5: Best fitness: 1201.0
+6: Best fitness: 1201.0
+7: Best fitness: 1201.0
+8: Best fitness: 1201.0
+9: Best fitness: 1201.0
+10: Best fitness: 1201.0
+result: 1201.0
+69: 
+45.4296875 0.523442734375 0.9453219531250001 1.4507883593750002 6195.3125 0.8212890625 0.2958828125 
+1: Best fitness: 1914.0
+2: Best fitness: 152.0
+3: Best fitness: 81.0
+4: Best fitness: 76.0
+5: Best fitness: 71.0
+6: Best fitness: 64.0
+7: Best fitness: 64.0
+8: Best fitness: 64.0
+9: Best fitness: 64.0
+10: Best fitness: 64.0
+result: 64.0
+70: 
+34.1796875 0.27344023437500004 0.195314453125 0.975785859375 1445.3125 0.5740390625 0.5431328125 
+1: Best fitness: 1914.0
+2: Best fitness: 335.0
+3: Best fitness: 154.0
+4: Best fitness: 140.0
+5: Best fitness: 106.0
+6: Best fitness: 99.0
+7: Best fitness: 99.0
+8: Best fitness: 95.0
+9: Best fitness: 95.0
+10: Best fitness: 95.0
+result: 95.0
+71: 
+11.6796875 0.773445234375 0.6953194531250001 1.9257908593750002 10945.3125 0.0795390625 0.048632812500000004 
+1: Best fitness: 1914.0
+2: Best fitness: 451.0
+3: Best fitness: 451.0
+4: Best fitness: 451.0
+5: Best fitness: 451.0
+6: Best fitness: 451.0
+7: Best fitness: 451.0
+8: Best fitness: 451.0
+9: Best fitness: 451.0
+10: Best fitness: 451.0
+result: 451.0
+72: 
+14.4921875 0.210939609375 0.132813828125 1.332037734375 5007.8125 0.1413515625 0.8521953125 
+1: Best fitness: 1914.0
+2: Best fitness: 106.0
+3: Best fitness: 80.0
+4: Best fitness: 80.0
+5: Best fitness: 80.0
+6: Best fitness: 73.0
+7: Best fitness: 66.0
+8: Best fitness: 65.0
+9: Best fitness: 61.0
+10: Best fitness: 58.0
+result: 56.0
+73: 
+36.9921875 0.710944609375 0.632818828125 0.38203273437499996 14507.8125 0.6358515625 0.35769531250000003 
+1: Best fitness: 1914.0
+2: Best fitness: 525.0
+3: Best fitness: 525.0
+4: Best fitness: 525.0
+5: Best fitness: 525.0
+6: Best fitness: 525.0
+7: Best fitness: 525.0
+8: Best fitness: 525.0
+9: Best fitness: 525.0
+10: Best fitness: 525.0
+result: 525.0
+74: 
+48.2421875 0.460942109375 0.38281632812500005 1.807040234375 19257.8125 0.8831015625 0.6049453125 
+1: Best fitness: 1914.0
+2: Best fitness: 1244.0
+3: Best fitness: 1244.0
+4: Best fitness: 1244.0
+5: Best fitness: 221.0
+6: Best fitness: 164.0
+7: Best fitness: 155.0
+8: Best fitness: 155.0
+9: Best fitness: 155.0
+10: Best fitness: 155.0
+result: 155.0
+75: 
+25.7421875 0.960947109375 0.882821328125 0.857035234375 9757.8125 0.3886015625 0.11044531249999999 
+1: Best fitness: 1914.0
+2: Best fitness: 225.0
+3: Best fitness: 89.0
+4: Best fitness: 69.0
+5: Best fitness: 69.0
+6: Best fitness: 66.0
+7: Best fitness: 64.0
+8: Best fitness: 64.0
+9: Best fitness: 64.0
+10: Best fitness: 64.0
+result: 64.0
+76: 
+20.1171875 0.335940859375 0.5078175781250001 0.619533984375 7382.8125 0.0177265625 0.7285703125 
+1: Best fitness: 1914.0
+2: Best fitness: 122.0
+3: Best fitness: 110.0
+4: Best fitness: 110.0
+5: Best fitness: 110.0
+6: Best fitness: 98.0
+7: Best fitness: 72.0
+8: Best fitness: 56.0
+9: Best fitness: 55.0
+10: Best fitness: 53.0
+result: 53.0
+77: 
+42.6171875 0.8359458593750001 0.007812578125 1.569538984375 16882.8125 0.5122265625 0.23407031250000002 
+1: Best fitness: 1914.0
+2: Best fitness: 169.0
+3: Best fitness: 168.0
+4: Best fitness: 90.0
+5: Best fitness: 85.0
+6: Best fitness: 68.0
+7: Best fitness: 62.0
+8: Best fitness: 57.0
+9: Best fitness: 57.0
+10: Best fitness: 57.0
+result: 55.0
+78: 
+31.3671875 0.08593835937500001 0.7578200781250001 0.14453148437500002 12132.8125 0.7594765625 0.9758203125 
+1: Best fitness: 1914.0
+2: Best fitness: 1845.0
+3: Best fitness: 1845.0
+4: Best fitness: 1845.0
+5: Best fitness: 1845.0
+6: Best fitness: 1845.0
+7: Best fitness: 1845.0
+8: Best fitness: 1845.0
+9: Best fitness: 1845.0
+10: Best fitness: 1845.0
+result: 1845.0
+79: 
+8.8671875 0.5859433593750001 0.25781507812500004 1.094536484375 2632.8125 0.2649765625 0.4813203125 
+1: Best fitness: 1914.0
+2: Best fitness: 313.0
+3: Best fitness: 313.0
+4: Best fitness: 313.0
+5: Best fitness: 313.0
+6: Best fitness: 313.0
+7: Best fitness: 313.0
+8: Best fitness: 313.0
+9: Best fitness: 313.0
+10: Best fitness: 313.0
+result: 313.0
+80: 
+10.2734375 0.11718867187500001 0.664069140625 1.035161171875 18664.0625 0.5431328125 0.1413515625 
+1: Best fitness: 1914.0
+2: Best fitness: 1130.0
+3: Best fitness: 1130.0
+4: Best fitness: 1130.0
+5: Best fitness: 1130.0
+6: Best fitness: 1130.0
+7: Best fitness: 1130.0
+8: Best fitness: 1130.0
+9: Best fitness: 1130.0
+10: Best fitness: 1130.0
+result: 1130.0
+81: 
+32.7734375 0.6171936718750001 0.16406414062500002 1.985166171875 9164.0625 0.048632812500000004 0.6358515625 
+1: Best fitness: 1914.0
+2: Best fitness: 1676.0
+3: Best fitness: 1674.0
+4: Best fitness: 1674.0
+5: Best fitness: 1674.0
+6: Best fitness: 1674.0
+7: Best fitness: 1674.0
+8: Best fitness: 1674.0
+9: Best fitness: 1674.0
+10: Best fitness: 1674.0
+result: 1674.0
+82: 
+44.0234375 0.367191171875 0.914071640625 0.560158671875 4414.0625 0.2958828125 0.3886015625 
+1: Best fitness: 1914.0
+2: Best fitness: 333.0
+3: Best fitness: 223.0
+4: Best fitness: 191.0
+5: Best fitness: 191.0
+6: Best fitness: 191.0
+7: Best fitness: 181.0
+8: Best fitness: 179.0
+9: Best fitness: 177.0
+10: Best fitness: 177.0
+result: 177.0
+83: 
+21.5234375 0.8671961718750001 0.41406664062500004 1.510163671875 13914.0625 0.7903828125 0.8831015625 
+1: Best fitness: 1914.0
+2: Best fitness: 1837.0
+3: Best fitness: 95.0
+4: Best fitness: 83.0
+5: Best fitness: 81.0
+6: Best fitness: 75.0
+7: Best fitness: 61.0
+8: Best fitness: 59.0
+9: Best fitness: 58.0
+10: Best fitness: 57.0
+result: 55.0
+84: 
+27.1484375 0.492192421875 0.039062890625 1.272662421875 11539.0625 0.6667578125 0.2649765625 
+1: Best fitness: 1914.0
+2: Best fitness: 1151.0
+3: Best fitness: 197.0
+4: Best fitness: 119.0
+5: Best fitness: 108.0
+6: Best fitness: 98.0
+7: Best fitness: 93.0
+8: Best fitness: 90.0
+9: Best fitness: 62.0
+10: Best fitness: 57.0
+result: 51.0
+85: 
+49.6484375 0.992197421875 0.539067890625 0.322657421875 2039.0625 0.1722578125 0.7594765625 
+1: Best fitness: 1914.0
+2: Best fitness: 1250.0
+3: Best fitness: 476.0
+4: Best fitness: 133.0
+5: Best fitness: 117.0
+6: Best fitness: 98.0
+7: Best fitness: 73.0
+8: Best fitness: 67.0
+9: Best fitness: 65.0
+10: Best fitness: 61.0
+result: 59.0
+86: 
+38.3984375 0.24218992187500002 0.28906539062500003 1.747664921875 6789.0625 0.4195078125 0.0177265625 
+1: Best fitness: 1914.0
+2: Best fitness: 1388.0
+3: Best fitness: 1387.0
+4: Best fitness: 1387.0
+5: Best fitness: 1387.0
+6: Best fitness: 1387.0
+7: Best fitness: 1387.0
+8: Best fitness: 1387.0
+9: Best fitness: 1387.0
+10: Best fitness: 1387.0
+result: 1387.0
+87: 
+15.8984375 0.742194921875 0.7890703906250001 0.797659921875 16289.0625 0.9140078125 0.5122265625 
+1: Best fitness: 1914.0
+2: Best fitness: 97.0
+3: Best fitness: 85.0
+4: Best fitness: 82.0
+5: Best fitness: 78.0
+6: Best fitness: 78.0
+7: Best fitness: 78.0
+8: Best fitness: 78.0
+9: Best fitness: 78.0
+10: Best fitness: 78.0
+result: 78.0
+88: 
+13.0859375 0.304690546875 0.351566015625 0.20390679687500002 10351.5625 0.8521953125 0.3267890625 
+1: Best fitness: 1914.0
+2: Best fitness: 137.0
+3: Best fitness: 127.0
+4: Best fitness: 125.0
+5: Best fitness: 113.0
+6: Best fitness: 85.0
+7: Best fitness: 82.0
+8: Best fitness: 82.0
+9: Best fitness: 81.0
+10: Best fitness: 74.0
+result: 72.0
+89: 
+35.5859375 0.804695546875 0.851571015625 1.1539117968750001 19851.5625 0.35769531250000003 0.8212890625 
+1: Best fitness: 1914.0
+2: Best fitness: 1510.0
+3: Best fitness: 560.0
+4: Best fitness: 127.0
+5: Best fitness: 94.0
+6: Best fitness: 62.0
+7: Best fitness: 59.0
+8: Best fitness: 53.0
+9: Best fitness: 52.0
+10: Best fitness: 49.0
+result: 49.0
+90: 
+46.8359375 0.05468804687500001 0.101563515625 0.678909296875 15101.5625 0.11044531249999999 0.0795390625 
+1: Best fitness: 1914.0
+2: Best fitness: 601.0
+3: Best fitness: 601.0
+4: Best fitness: 232.0
+5: Best fitness: 133.0
+6: Best fitness: 89.0
+7: Best fitness: 83.0
+8: Best fitness: 83.0
+9: Best fitness: 83.0
+10: Best fitness: 83.0
+result: 83.0
+91: 
+24.3359375 0.554693046875 0.601568515625 1.6289142968750001 5601.5625 0.6049453125 0.5740390625 
+1: Best fitness: 1914.0
+2: Best fitness: 208.0
+3: Best fitness: 208.0
+4: Best fitness: 208.0
+5: Best fitness: 208.0
+6: Best fitness: 208.0
+7: Best fitness: 208.0
+8: Best fitness: 208.0
+9: Best fitness: 208.0
+10: Best fitness: 208.0
+result: 208.0
+92: 
+18.7109375 0.17968929687500002 0.9765722656250001 1.866415546875 3226.5625 0.9758203125 0.20316406250000002 
+1: Best fitness: 1914.0
+2: Best fitness: 1266.0
+3: Best fitness: 1266.0
+4: Best fitness: 1266.0
+5: Best fitness: 1266.0
+6: Best fitness: 1266.0
+7: Best fitness: 1266.0
+8: Best fitness: 1266.0
+9: Best fitness: 1266.0
+10: Best fitness: 1266.0
+result: 1266.0
+93: 
+41.2109375 0.679694296875 0.476567265625 0.916410546875 12726.5625 0.4813203125 0.6976640625 
+1: Best fitness: 1914.0
+2: Best fitness: 307.0
+3: Best fitness: 307.0
+4: Best fitness: 307.0
+5: Best fitness: 307.0
+6: Best fitness: 307.0
+7: Best fitness: 307.0
+8: Best fitness: 307.0
+9: Best fitness: 307.0
+10: Best fitness: 307.0
+result: 307.0
+94: 
+29.9609375 0.42969179687500003 0.7265697656250001 1.3914130468750001 17476.5625 0.23407031250000002 0.4504140625 
+1: Best fitness: 1914.0
+2: Best fitness: 406.0
+3: Best fitness: 131.0
+4: Best fitness: 131.0
+5: Best fitness: 131.0
+6: Best fitness: 131.0
+7: Best fitness: 131.0
+8: Best fitness: 131.0
+9: Best fitness: 131.0
+10: Best fitness: 131.0
+result: 131.0
+95: 
+7.4609375 0.9296967968750001 0.22656476562500003 0.441408046875 7976.5625 0.7285703125 0.9449140625 
+1: Best fitness: 1914.0
+2: Best fitness: 174.0
+3: Best fitness: 86.0
+4: Best fitness: 59.0
+5: Best fitness: 55.0
+6: Best fitness: 55.0
+7: Best fitness: 55.0
+8: Best fitness: 55.0
+9: Best fitness: 55.0
+10: Best fitness: 52.0
+result: 52.0
+96: 
+6.7578125 0.132813828125 0.39844148437500004 0.767972265625 10648.4375 0.6203984375 0.4040546875 
+1: Best fitness: 1914.0
+2: Best fitness: 1114.0
+3: Best fitness: 1104.0
+4: Best fitness: 1104.0
+5: Best fitness: 1104.0
+6: Best fitness: 1104.0
+7: Best fitness: 1104.0
+8: Best fitness: 1104.0
+9: Best fitness: 1104.0
+10: Best fitness: 1104.0
+result: 1104.0
+97: 
+29.2578125 0.632818828125 0.8984464843750001 1.717977265625 1148.4375 0.1258984375 0.8985546875 
+1: Best fitness: 1914.0
+2: Best fitness: 170.0
+3: Best fitness: 160.0
+4: Best fitness: 160.0
+5: Best fitness: 160.0
+6: Best fitness: 160.0
+7: Best fitness: 160.0
+8: Best fitness: 160.0
+9: Best fitness: 160.0
+10: Best fitness: 160.0
+result: 160.0
+98: 
+40.5078125 0.38281632812500005 0.148438984375 0.292969765625 5898.4375 0.3731484375 0.1568046875 
+1: Best fitness: 1914.0
+2: Best fitness: 818.0
+3: Best fitness: 415.0
+4: Best fitness: 415.0
+5: Best fitness: 415.0
+6: Best fitness: 415.0
+7: Best fitness: 415.0
+8: Best fitness: 415.0
+9: Best fitness: 415.0
+10: Best fitness: 415.0
+result: 415.0
+99: 
+18.0078125 0.882821328125 0.6484439843750001 1.242974765625 15398.4375 0.8676484375 0.6513046875 
+1: Best fitness: 1914.0
+2: Best fitness: 241.0
+3: Best fitness: 241.0
+4: Best fitness: 241.0
+5: Best fitness: 241.0
+6: Best fitness: 241.0
+7: Best fitness: 241.0
+8: Best fitness: 241.0
+9: Best fitness: 241.0
+10: Best fitness: 241.0
+result: 241.0
+100: 
+23.6328125 0.25781507812500004 0.773445234375 1.480476015625 17773.4375 0.7440234375 0.0331796875 
+1: Best fitness: 1914.0
+2: Best fitness: 98.0
+3: Best fitness: 71.0
+4: Best fitness: 59.0
+5: Best fitness: 57.0
+6: Best fitness: 52.0
+7: Best fitness: 51.0
+8: Best fitness: 49.0
+9: Best fitness: 49.0
+10: Best fitness: 47.0
+result: 46.0
+101: 
+46.1328125 0.7578200781250001 0.27344023437500004 0.530471015625 8273.4375 0.2495234375 0.5276796875 
+1: Best fitness: 1914.0
+2: Best fitness: 225.0
+3: Best fitness: 110.0
+4: Best fitness: 87.0
+5: Best fitness: 77.0
+6: Best fitness: 60.0
+7: Best fitness: 59.0
+8: Best fitness: 57.0
+9: Best fitness: 57.0
+10: Best fitness: 56.0
+result: 56.0
+102: 
+34.8828125 0.007812578125 0.523442734375 1.955478515625 3523.4375 0.4967734375 0.2804296875 
+1: Best fitness: 1914.0
+2: Best fitness: 1845.0
+3: Best fitness: 1845.0
+4: Best fitness: 1845.0
+5: Best fitness: 1845.0
+6: Best fitness: 1845.0
+7: Best fitness: 1845.0
+8: Best fitness: 1845.0
+9: Best fitness: 1845.0
+10: Best fitness: 1845.0
+result: 1845.0
+103: 
+12.3828125 0.5078175781250001 0.023437734375 1.005473515625 13023.4375 0.9912734375 0.7749296875 
+1: Best fitness: 1914.0
+2: Best fitness: 209.0
+3: Best fitness: 133.0
+4: Best fitness: 88.0
+5: Best fitness: 81.0
+6: Best fitness: 77.0
+7: Best fitness: 60.0
+8: Best fitness: 52.0
+9: Best fitness: 52.0
+10: Best fitness: 49.0
+result: 49.0
+104: 
+15.1953125 0.445316953125 0.5859433593750001 0.411720390625 2335.9375 0.8058359375 0.09499218749999999 
+1: Best fitness: 1914.0
+2: Best fitness: 219.0
+3: Best fitness: 175.0
+4: Best fitness: 175.0
+5: Best fitness: 128.0
+6: Best fitness: 80.0
+7: Best fitness: 63.0
+8: Best fitness: 57.0
+9: Best fitness: 55.0
+10: Best fitness: 55.0
+result: 55.0
+105: 
+37.6953125 0.9453219531250001 0.08593835937500001 1.361725390625 11835.9375 0.3113359375 0.5894921875 
+1: Best fitness: 1914.0
+2: Best fitness: 143.0
+3: Best fitness: 88.0
+4: Best fitness: 75.0
+5: Best fitness: 67.0
+6: Best fitness: 65.0
+7: Best fitness: 65.0
+8: Best fitness: 65.0
+9: Best fitness: 63.0
+10: Best fitness: 63.0
+result: 62.0
+106: 
+48.9453125 0.195314453125 0.8359458593750001 0.886722890625 16585.9375 0.0640859375 0.3422421875 
+1: Best fitness: 1914.0
+2: Best fitness: 109.0
+3: Best fitness: 73.0
+4: Best fitness: 63.0
+5: Best fitness: 57.0
+6: Best fitness: 55.0
+7: Best fitness: 53.0
+8: Best fitness: 52.0
+9: Best fitness: 51.0
+10: Best fitness: 49.0
+result: 46.0
+107: 
+26.4453125 0.6953194531250001 0.335940859375 1.836727890625 7085.9375 0.5585859375 0.8367421875 
+1: Best fitness: 1914.0
+2: Best fitness: 842.0
+3: Best fitness: 174.0
+4: Best fitness: 83.0
+5: Best fitness: 67.0
+6: Best fitness: 60.0
+7: Best fitness: 52.0
+8: Best fitness: 51.0
+9: Best fitness: 49.0
+10: Best fitness: 46.0
+result: 45.0
+108: 
+20.8203125 0.070313203125 0.210939609375 1.599226640625 9460.9375 0.9294609375 0.4658671875 
+1: Best fitness: 1914.0
+2: Best fitness: 1860.0
+3: Best fitness: 1860.0
+4: Best fitness: 1860.0
+5: Best fitness: 1860.0
+6: Best fitness: 1860.0
+7: Best fitness: 1860.0
+8: Best fitness: 1860.0
+9: Best fitness: 1860.0
+10: Best fitness: 1860.0
+result: 1860.0
+109: 
+43.3203125 0.570318203125 0.710944609375 0.649221640625 18960.9375 0.4349609375 0.9603671875 
+1: Best fitness: 1914.0
+2: Best fitness: 681.0
+3: Best fitness: 256.0
+4: Best fitness: 153.0
+5: Best fitness: 116.0
+6: Best fitness: 80.0
+7: Best fitness: 69.0
+8: Best fitness: 69.0
+9: Best fitness: 69.0
+10: Best fitness: 69.0
+result: 69.0
+110: 
+32.0703125 0.320315703125 0.460942109375 1.124224140625 14210.9375 0.1877109375 0.2186171875 
+1: Best fitness: 1914.0
+2: Best fitness: 1155.0
+3: Best fitness: 1155.0
+4: Best fitness: 233.0
+5: Best fitness: 91.0
+6: Best fitness: 85.0
+7: Best fitness: 83.0
+8: Best fitness: 81.0
+9: Best fitness: 81.0
+10: Best fitness: 75.0
+result: 73.0
+111: 
+9.5703125 0.820320703125 0.960947109375 0.174219140625 4710.9375 0.6822109375 0.7131171875 
+1: Best fitness: 1914.0
+2: Best fitness: 101.0
+3: Best fitness: 88.0
+4: Best fitness: 87.0
+5: Best fitness: 87.0
+6: Best fitness: 86.0
+7: Best fitness: 84.0
+8: Best fitness: 82.0
+9: Best fitness: 81.0
+10: Best fitness: 71.0
+result: 69.0
+112: 
+8.1640625 0.351566015625 0.11718867187500001 1.896103203125 15992.1875 0.4040546875 0.9294609375 
+1: Best fitness: 1914.0
+2: Best fitness: 675.0
+3: Best fitness: 436.0
+4: Best fitness: 436.0
+5: Best fitness: 436.0
+6: Best fitness: 436.0
+7: Best fitness: 436.0
+8: Best fitness: 436.0
+9: Best fitness: 436.0
+10: Best fitness: 436.0
+result: 436.0
+113: 
+30.6640625 0.851571015625 0.6171936718750001 0.9460982031249999 6492.1875 0.8985546875 0.4349609375 
+1: Best fitness: 1914.0
+2: Best fitness: 601.0
+3: Best fitness: 150.0
+4: Best fitness: 150.0
+5: Best fitness: 150.0
+6: Best fitness: 150.0
+7: Best fitness: 150.0
+8: Best fitness: 150.0
+9: Best fitness: 150.0
+10: Best fitness: 150.0
+result: 150.0
+114: 
+41.9140625 0.101563515625 0.367191171875 1.421100703125 1742.1875 0.6513046875 0.6822109375 
+1: Best fitness: 1914.0
+2: Best fitness: 1803.0
+3: Best fitness: 1803.0
+4: Best fitness: 1803.0
+5: Best fitness: 1803.0
+6: Best fitness: 1803.0
+7: Best fitness: 1803.0
+8: Best fitness: 1803.0
+9: Best fitness: 1803.0
+10: Best fitness: 1803.0
+result: 1803.0
+115: 
+19.4140625 0.601568515625 0.8671961718750001 0.47109570312500004 11242.1875 0.1568046875 0.1877109375 
+1: Best fitness: 1914.0
+2: Best fitness: 807.0
+3: Best fitness: 137.0
+4: Best fitness: 120.0
+5: Best fitness: 116.0
+6: Best fitness: 115.0
+7: Best fitness: 115.0
+8: Best fitness: 87.0
+9: Best fitness: 87.0
+10: Best fitness: 87.0
+result: 87.0
+116: 
+25.0390625 0.22656476562500003 0.742194921875 0.23359445312500002 13617.1875 0.2804296875 0.5585859375 
+1: Best fitness: 1914.0
+2: Best fitness: 1696.0
+3: Best fitness: 1696.0
+4: Best fitness: 1696.0
+5: Best fitness: 1696.0
+6: Best fitness: 1696.0
+7: Best fitness: 1696.0
+8: Best fitness: 1696.0
+9: Best fitness: 1696.0
+10: Best fitness: 1696.0
+result: 1696.0
+117: 
+47.5390625 0.7265697656250001 0.24218992187500002 1.183599453125 4117.1875 0.7749296875 0.0640859375 
+1: Best fitness: 1914.0
+2: Best fitness: 341.0
+3: Best fitness: 228.0
+4: Best fitness: 206.0
+5: Best fitness: 179.0
+6: Best fitness: 102.0
+7: Best fitness: 91.0
+8: Best fitness: 69.0
+9: Best fitness: 67.0
+10: Best fitness: 66.0
+result: 63.0
+118: 
+36.2890625 0.476567265625 0.992197421875 0.7085969531249999 8867.1875 0.5276796875 0.8058359375 
+1: Best fitness: 1914.0
+2: Best fitness: 100.0
+3: Best fitness: 88.0
+4: Best fitness: 85.0
+5: Best fitness: 84.0
+6: Best fitness: 83.0
+7: Best fitness: 80.0
+8: Best fitness: 80.0
+9: Best fitness: 74.0
+10: Best fitness: 73.0
+result: 72.0
+119: 
+13.7890625 0.9765722656250001 0.492192421875 1.658601953125 18367.1875 0.0331796875 0.3113359375 
+1: Best fitness: 1914.0
+2: Best fitness: 96.0
+3: Best fitness: 72.0
+4: Best fitness: 57.0
+5: Best fitness: 57.0
+6: Best fitness: 54.0
+7: Best fitness: 53.0
+8: Best fitness: 51.0
+9: Best fitness: 50.0
+10: Best fitness: 49.0
+result: 49.0
+120: 
+10.9765625 0.039062890625 0.9296967968750001 1.064848828125 7679.6875 0.2186171875 0.6203984375 
+1: Best fitness: 1914.0
+2: Best fitness: 1130.0
+3: Best fitness: 1130.0
+4: Best fitness: 1130.0
+5: Best fitness: 1130.0
+6: Best fitness: 1130.0
+7: Best fitness: 1130.0
+8: Best fitness: 1130.0
+9: Best fitness: 1130.0
+10: Best fitness: 1130.0
+result: 1130.0
+121: 
+33.4765625 0.539067890625 0.42969179687500003 0.114843828125 17179.6875 0.7131171875 0.1258984375 
+1: Best fitness: 1914.0
+2: Best fitness: 316.0
+3: Best fitness: 154.0
+4: Best fitness: 116.0
+5: Best fitness: 112.0
+6: Best fitness: 104.0
+7: Best fitness: 101.0
+8: Best fitness: 83.0
+9: Best fitness: 78.0
+10: Best fitness: 77.0
+result: 69.0
+122: 
+44.7265625 0.28906539062500003 0.679694296875 1.5398513281250001 12429.6875 0.9603671875 0.8676484375 
+1: Best fitness: 1914.0
+2: Best fitness: 282.0
+3: Best fitness: 87.0
+4: Best fitness: 69.0
+5: Best fitness: 55.0
+6: Best fitness: 53.0
+7: Best fitness: 53.0
+8: Best fitness: 53.0
+9: Best fitness: 53.0
+10: Best fitness: 53.0
+result: 53.0
+123: 
+22.2265625 0.7890703906250001 0.17968929687500002 0.589846328125 2929.6875 0.4658671875 0.3731484375 
+1: Best fitness: 1914.0
+2: Best fitness: 771.0
+3: Best fitness: 771.0
+4: Best fitness: 771.0
+5: Best fitness: 771.0
+6: Best fitness: 771.0
+7: Best fitness: 771.0
+8: Best fitness: 771.0
+9: Best fitness: 771.0
+10: Best fitness: 771.0
+result: 771.0
+124: 
+16.6015625 0.41406664062500004 0.304690546875 0.8273475781249999 5304.6875 0.09499218749999999 0.9912734375 
+1: Best fitness: 1914.0
+2: Best fitness: 170.0
+3: Best fitness: 84.0
+4: Best fitness: 78.0
+5: Best fitness: 78.0
+6: Best fitness: 69.0
+7: Best fitness: 57.0
+8: Best fitness: 56.0
+9: Best fitness: 54.0
+10: Best fitness: 53.0
+result: 53.0
+125: 
+39.1015625 0.914071640625 0.804695546875 1.7773525781250001 14804.6875 0.5894921875 0.4967734375 
+1: Best fitness: 1914.0
+2: Best fitness: 284.0
+3: Best fitness: 133.0
+4: Best fitness: 133.0
+5: Best fitness: 133.0
+6: Best fitness: 133.0
+7: Best fitness: 133.0
+8: Best fitness: 133.0
+9: Best fitness: 133.0
+10: Best fitness: 133.0
+result: 133.0
+126: 
+27.8515625 0.16406414062500002 0.05468804687500001 0.35234507812500004 19554.6875 0.8367421875 0.7440234375 
+1: Best fitness: 1914.0
+2: Best fitness: 1307.0
+3: Best fitness: 425.0
+4: Best fitness: 425.0
+5: Best fitness: 425.0
+6: Best fitness: 425.0
+7: Best fitness: 425.0
+8: Best fitness: 425.0
+9: Best fitness: 425.0
+10: Best fitness: 425.0
+result: 425.0
+127: 
+5.3515625 0.664069140625 0.554693046875 1.3023500781250001 10054.6875 0.3422421875 0.2495234375 
+1: Best fitness: 1914.0
+2: Best fitness: 748.0
+3: Best fitness: 748.0
+4: Best fitness: 748.0
+5: Best fitness: 748.0
+6: Best fitness: 748.0
+7: Best fitness: 748.0
+8: Best fitness: 748.0
+9: Best fitness: 748.0
+10: Best fitness: 748.0
+result: 748.0
+128: 
+5.52734375 0.3320345703125 0.29297167968750004 0.4636737890625 18144.53125 0.67834765625 0.86378515625 
+1: Best fitness: 1914.0
+2: Best fitness: 786.0
+3: Best fitness: 786.0
+4: Best fitness: 786.0
+5: Best fitness: 786.0
+6: Best fitness: 786.0
+7: Best fitness: 786.0
+8: Best fitness: 786.0
+9: Best fitness: 786.0
+10: Best fitness: 786.0
+result: 786.0
+129: 
+28.02734375 0.8320395703125001 0.7929766796875001 1.4136787890625 8644.53125 0.18384765625000002 0.36928515625 
+1: Best fitness: 1914.0
+2: Best fitness: 682.0
+3: Best fitness: 138.0
+4: Best fitness: 76.0
+5: Best fitness: 61.0
+6: Best fitness: 60.0
+7: Best fitness: 60.0
+8: Best fitness: 60.0
+9: Best fitness: 60.0
+10: Best fitness: 60.0
+result: 60.0
+130: 
+39.27734375 0.08203207031250001 0.042969179687500005 0.9386762890625 3894.53125 0.43109765625 0.61653515625 
+1: Best fitness: 1914.0
+2: Best fitness: 1727.0
+3: Best fitness: 274.0
+4: Best fitness: 91.0
+5: Best fitness: 74.0
+6: Best fitness: 64.0
+7: Best fitness: 61.0
+8: Best fitness: 55.0
+9: Best fitness: 52.0
+10: Best fitness: 50.0
+result: 50.0
+131: 
+16.77734375 0.5820370703125001 0.5429741796875001 1.8886812890625 13394.53125 0.92559765625 0.12203515625 
+1: Best fitness: 1914.0
+2: Best fitness: 451.0
+3: Best fitness: 152.0
+4: Best fitness: 115.0
+5: Best fitness: 101.0
+6: Best fitness: 89.0
+7: Best fitness: 84.0
+8: Best fitness: 84.0
+9: Best fitness: 84.0
+10: Best fitness: 84.0
+result: 83.0
+132: 
+22.40234375 0.20703332031250002 0.9179779296875 1.6511800390625 11019.53125 0.5547226562500001 0.74016015625 
+1: Best fitness: 1914.0
+2: Best fitness: 1201.0
+3: Best fitness: 1201.0
+4: Best fitness: 1201.0
+5: Best fitness: 1201.0
+6: Best fitness: 1201.0
+7: Best fitness: 1201.0
+8: Best fitness: 1201.0
+9: Best fitness: 1201.0
+10: Best fitness: 1201.0
+result: 1201.0
+133: 
+44.90234375 0.7070383203125 0.41797292968750005 0.7011750390625 1519.53125 0.06022265625 0.24566015625 
+1: Best fitness: 1914.0
+2: Best fitness: 206.0
+3: Best fitness: 90.0
+4: Best fitness: 86.0
+5: Best fitness: 71.0
+6: Best fitness: 62.0
+7: Best fitness: 57.0
+8: Best fitness: 57.0
+9: Best fitness: 55.0
+10: Best fitness: 54.0
+result: 53.0
+134: 
+33.65234375 0.4570358203125 0.6679754296875 1.1761775390625 6269.53125 0.30747265625000003 0.98741015625 
+1: Best fitness: 1914.0
+2: Best fitness: 138.0
+3: Best fitness: 75.0
+4: Best fitness: 67.0
+5: Best fitness: 65.0
+6: Best fitness: 65.0
+7: Best fitness: 65.0
+8: Best fitness: 65.0
+9: Best fitness: 65.0
+10: Best fitness: 65.0
+result: 65.0
+135: 
+11.15234375 0.9570408203125 0.1679704296875 0.2261725390625 15769.53125 0.80197265625 0.49291015625 
+1: Best fitness: 1914.0
+2: Best fitness: 169.0
+3: Best fitness: 139.0
+4: Best fitness: 106.0
+5: Best fitness: 67.0
+6: Best fitness: 58.0
+7: Best fitness: 58.0
+8: Best fitness: 49.0
+9: Best fitness: 45.0
+10: Best fitness: 45.0
+result: 44.0
+136: 
+13.96484375 0.0195314453125 0.7304760546875001 0.5824244140625 9832.03125 0.98741015625 0.67834765625 
+1: Best fitness: 1914.0
+2: Best fitness: 1397.0
+3: Best fitness: 1397.0
+4: Best fitness: 1397.0
+5: Best fitness: 1397.0
+6: Best fitness: 1397.0
+7: Best fitness: 1397.0
+8: Best fitness: 1397.0
+9: Best fitness: 1397.0

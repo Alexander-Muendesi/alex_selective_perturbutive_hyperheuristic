@@ -49,9 +49,26 @@ public class Perturbator {
      * This method follows Algorithm 7 in the Textbook
      */
     public void execute(){
+        //randomly generate several initial solutions and select the one with the best fitness
+        Solutions []s = new Solutions[10];
+        int best = 0;
+        double tempFitness = 0;
+
+        for(int i=0; i<10;i++){
+            s[i] = new Solutions(reader,random);
+            Timetable temp = new Timetable(s[i].generateSolution(), reader);
+            double t = temp.calculateFitness();
+            if(i == 0)
+                tempFitness = t;
+            else if(t < tempFitness){
+                tempFitness=t;
+                best = i;
+            }
+        }
         //create an initial solution
-        Solutions solution = new Solutions(reader, random);
-        Timetable timetable = new Timetable(solution.generateSolution(), reader);
+        // Solutions solution = new Solutions(reader, random);
+        // Timetable timetable = new Timetable(solution.generateSolution(), reader);
+        Timetable timetable = new Timetable(s[best].timetable, reader);
         Timetable copyTimetable = new Timetable(timetable.getTimetable(),reader); 
         int numIterations = 0;
         double bestFitness = timetable.calculateFitness();
@@ -63,7 +80,7 @@ public class Perturbator {
 
         int c = 1;
         while(true && numIterations < 100000){//change this stopping condition later. Thinking a 30 period moving average of fitness of timetable
-            if(numIterations % 1000 == 0)
+            if(numIterations % 10000 == 0)
                 System.out.println(c++ + ": Best fitness: " + bestFitness);
             //heuristic selection
             Heuristic heuristic = null;
