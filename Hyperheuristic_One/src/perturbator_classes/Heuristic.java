@@ -69,8 +69,8 @@ public abstract class Heuristic {
             timeIndex = 0;
     }
 
-    public void addFitness(double fitness){
-        fitnessHistory[fitnessIndex] = fitness;
+    public void addFitness(int[] fitness){
+        fitnessHistory[fitnessIndex] = fitness[0] + fitness[1];
         if(fitnessIndex % numInvocations == 0)
             fitnessIndex = 0;
     }
@@ -102,6 +102,7 @@ public abstract class Heuristic {
         double f2 = calculateF2(heuristics);
         double f3 = delta * ((System.currentTimeMillis() - lastApplicationTime) / 1000);//since we want CPU seconds an not milliseonds
 
+        // System.err.println("f1: " + f1 +" f2: " + f2 + " :" + f3);
         this.rank = f1 + f2 + f3;
         return rank;
     }

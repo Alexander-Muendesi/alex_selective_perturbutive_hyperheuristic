@@ -208,8 +208,6 @@ public class Constraints {
         return true;//course is available for the period
     }
 
-    
-    //soft constraints start here
     /**
      * Each student above the room capacity is 1 penalty;
      * @param timetable

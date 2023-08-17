@@ -26,11 +26,16 @@ public class Timetable {
         this.constraints = new Constraints(reader);
     }
 
-    public int calculateFitness(){
+    /**
+     * 0 is for hard constraints, 1 for softconstraints
+     * @return
+     */
+    public int[] calculateFitness(){
         hardConstraintCost = calculateHardConstraintCost();
         softConstraintCost = calculateSoftConstraintCost();
-        fitness = hardConstraintCost + softConstraintCost;
-        return fitness;
+        // fitness = hardConstraintCost + softConstraintCost;
+        int []arr = {hardConstraintCost,softConstraintCost}; 
+        return arr;
     }
 
     public int calculateHardConstraintCost(){

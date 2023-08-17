@@ -25,21 +25,21 @@ public class Swap extends Heuristic{
         String [][][]copy = createTimetableCopy(timetable);
 
         //randomly select 2 different timeslots
-        int dayOne = random.nextInt(copy.length);
-        int periodOne = random.nextInt(copy[0].length);
-        int roomIndexOne = random.nextInt(copy[0][0].length);
+        int dayOne = random.nextInt(reader.numDays);
+        int periodOne = random.nextInt(reader.periodsPerDay);
+        int roomIndexOne = random.nextInt(reader.rooms.size());
 
-        int dayTwo = random.nextInt(copy.length);
-        int periodTwo = random.nextInt(copy[0].length);
-        int roomIndexTwo = random.nextInt(copy[0][0].length);
+        int dayTwo = random.nextInt(reader.numDays);
+        int periodTwo = random.nextInt(reader.periodsPerDay);
+        int roomIndexTwo = random.nextInt(reader.rooms.size());
 
         //make sure the 2 timeslots are not the same
         if(dayOne == dayTwo && periodOne == periodTwo && roomIndexOne == roomIndexTwo){
             while(true){
                 if(dayOne == dayTwo && periodOne == periodTwo && roomIndexOne == roomIndexTwo){
-                    dayTwo = random.nextInt(copy.length);
-                    periodTwo = random.nextInt(copy[0].length);
-                    roomIndexTwo = random.nextInt(copy[0][0].length);
+                    dayTwo = random.nextInt(reader.numDays);
+                    periodTwo = random.nextInt(reader.periodsPerDay);
+                    roomIndexTwo = random.nextInt(reader.rooms.size());
                 }
                 else
                     break;

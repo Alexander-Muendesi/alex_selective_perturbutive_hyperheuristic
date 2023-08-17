@@ -21,9 +21,9 @@ public class SwapRow extends Heuristic {
 
     public String[][][] executeHeuristic(String[][][] timetable){
         String[][][] copy = createTimetableCopy(timetable);
-        int numDays = copy.length;
-        int periodsPerDay = copy[0].length;
-        int numRooms = copy[0][0].length;
+        int numDays = reader.numDays;
+        int periodsPerDay = reader.periodsPerDay;
+        int numRooms = reader.rooms.size();
 
         int day = random.nextInt(numDays);
         int rowOne = random.nextInt(periodsPerDay);

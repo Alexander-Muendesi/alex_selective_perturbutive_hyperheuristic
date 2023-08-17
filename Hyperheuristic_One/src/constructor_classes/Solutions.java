@@ -1,5 +1,6 @@
 package constructor_classes;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -49,7 +50,6 @@ public class Solutions {
                     // System.out.println("3: " + allConstraintsSatisfied);
                     allConstraintsSatisfied = constraints.unavailabilityConstraint(course.courseId, day, period);
                     // System.out.println("4: " + allConstraintsSatisfied);
-
                     if(allConstraintsSatisfied){
                         timetable[day][period][roomIndex] = course.courseId;
                         lecturesAssigned++;
@@ -78,10 +78,13 @@ public class Solutions {
     }
 
     private void initializeTimetable(){
-        for(String[][] dim1: timetable)
-            for(String[] dim2: dim1)
-                for(String val: dim2)
-                    val = null;
+        for(int i=0; i<reader.numDays;i++){
+            for(int j=0; j<reader.periodsPerDay; j++){
+                for(int k=0;k<reader.rooms.size();k++){
+                    timetable[i][j][k] = null;
+                }
+            }
+        }
     }
 
     /**
