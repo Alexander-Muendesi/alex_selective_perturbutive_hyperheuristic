@@ -22,8 +22,8 @@ public class RoomChange extends Heuristic {
     /**
      * this method moves the current course to another room within the same day and period
      */
-    public String[][][] executeHeuristic(String[][][] timetable){
-        String[][][] copy = createTimetableCopy(timetable);
+    public String[] executeHeuristic(String[] timetable){
+        String[] copy = createTimetableCopy(timetable);
 
         int roomOne = random.nextInt(reader.rooms.size());
         int roomTwo = random.nextInt(reader.rooms.size());
@@ -34,9 +34,12 @@ public class RoomChange extends Heuristic {
             roomOne = random.nextInt(reader.rooms.size());
         }
 
-        String temp = copy[day][period][roomOne];
-        copy[day][period][roomOne] = copy[day][period][roomTwo];
-        copy[day][period][roomTwo] = temp;
+        int targetIndexOne = day * (reader.periodsPerDay * reader.rooms.size()) + period * reader.rooms.size() + roomOne;
+        int targetIndexTwo = day * (reader.periodsPerDay * reader.rooms.size()) + period * reader.rooms.size() + roomTwo;
+
+        String temp = copy[targetIndexOne];
+        copy[targetIndexOne] = copy[targetIndexTwo];
+        copy[targetIndexTwo] = temp;
 
         return copy;
     }

@@ -23,8 +23,8 @@ public class DayChange extends Heuristic {
      * this method swaps 2 days in the timetable whilst maintaining the structure of the courses
      * @param timetable
      */
-    public String[][][] executeHeuristic(String[][][] timetable){
-        String [][][]copy = createTimetableCopy(timetable);
+    public String[] executeHeuristic(String[] timetable){
+        String []copy = createTimetableCopy(timetable);
 
         int dayOne = random.nextInt(reader.numDays);
         int dayTwo = random.nextInt(reader.numDays);
@@ -39,10 +39,12 @@ public class DayChange extends Heuristic {
 
         //swap the elements between the days
         for(int period=0; period < reader.periodsPerDay; period++){
-            for(int roomIndex = 0;roomIndex < reader.rooms.size(); roomIndex++){
-                String temp = copy[dayOne][period][roomIndex];
-                copy[dayOne][period][roomIndex] = copy[dayTwo][period][roomIndex];
-                copy[dayTwo][period][roomIndex] = temp;
+            for(int roomIndex = 0;roomIndex<reader.rooms.size();roomIndex++){
+                int targetIndexOne = dayOne * (reader.periodsPerDay * reader.rooms.size()) + period * reader.rooms.size() + roomIndex;
+                int targetIndexTwo = dayTwo * (reader.periodsPerDay * reader.rooms.size()) + period * reader.rooms.size() + roomIndex;
+                String temp = copy[targetIndexOne];
+                copy[targetIndexOne] = copy[targetIndexTwo];
+                copy[targetIndexTwo] = temp;
             }
         }
 

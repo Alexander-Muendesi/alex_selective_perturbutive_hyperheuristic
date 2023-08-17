@@ -75,18 +75,16 @@ public abstract class Heuristic {
             fitnessIndex = 0;
     }
 
-    public abstract String[][][] executeHeuristic(String[][][] timetable);
+    public abstract String[] executeHeuristic(String[] timetable);
 
-    protected String[][][] createTimetableCopy(String[][][] timetable){
-        String [][][]result = new String[timetable.length][timetable[0].length][timetable[0][0].length];
+    protected String[] createTimetableCopy(String[] timetable){
+        String []result = new String[timetable.length];
 
-        for(int i=0; i < timetable.length; i++)
-            for(int j=0; j < timetable[0].length; j++)
-                for(int k=0; k < timetable[0][0].length; k++)
-                    if(timetable[i][j][k] != null)
-                        result[i][j][k] = new String(timetable[i][j][k]);
-                    else
-                        result[i][j][k] = null;
+        for(int k=0; k < timetable.length; k++)
+            if(timetable[k] != null)
+                result[k] = new String(timetable[k]);
+            else
+                result[k] = null;
 
         return result;
     }

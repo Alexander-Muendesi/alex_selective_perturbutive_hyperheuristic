@@ -18,8 +18,8 @@ public class PeriodChange extends Heuristic{
         super(n, random, reader, alpha, beta, delta);
     }
     
-    public String[][][] executeHeuristic(String[][][] timetable){
-        String[][][] copy = createTimetableCopy(timetable);
+    public String[] executeHeuristic(String[] timetable){
+        String[] copy = createTimetableCopy(timetable);
 
         int day = random.nextInt(reader.numDays);
         int periodOne = random.nextInt(reader.periodsPerDay);
@@ -30,9 +30,12 @@ public class PeriodChange extends Heuristic{
             periodOne = random.nextInt(reader.periodsPerDay);
         }
 
-        String temp = copy[day][periodOne][roomIndex];
-        copy[day][periodOne][roomIndex] = copy[day][periodTwo][roomIndex];
-        copy[day][periodTwo][roomIndex] = temp;
+        int targetIndexOne = day * (reader.periodsPerDay * reader.rooms.size()) + periodOne * reader.rooms.size() + roomIndex;
+        int targetIndexTwo = day * (reader.periodsPerDay * reader.rooms.size()) + periodTwo * reader.rooms.size() + roomIndex;
+
+        String temp = copy[targetIndexOne];
+        copy[targetIndexOne] = copy[targetIndexTwo];
+        copy[targetIndexTwo] = temp;
 
         return copy;
     }

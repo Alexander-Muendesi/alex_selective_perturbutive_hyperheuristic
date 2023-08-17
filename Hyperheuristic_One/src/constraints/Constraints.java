@@ -27,22 +27,17 @@ public class Constraints {
      * @param course
      * @return true=satisfied. false=not satisfied
      */
-    public boolean lecturesConstraint(String[][][] timetable, Course course){
+    public boolean lecturesConstraint(String[] timetable, Course course){
         boolean stop = false;
         int numAssignedLectures = 0;
 
-        for(int day = 0; day < reader.numDays && !stop; day++){
-            for(int period = 0; period < reader.periodsPerDay && !stop; period++){
-                for(int roomIndex = 0; roomIndex < reader.rooms.size() && !stop; roomIndex++){
-                    if(numAssignedLectures < course.numLectures){
-                        if(course.courseId.equals(timetable[day][period][roomIndex]))
-                            numAssignedLectures++;
-                    }
-                    else{
-                        stop = true;
-                    }
-                }
+        for(int i=0; i< timetable.length && !stop;i++){
+            if(numAssignedLectures < course.numLectures){
+                if(course.courseId.equals(timetable[i]))
+                    numAssignedLectures++;
             }
+            else
+                stop = true;
         }
 
         return stop;
@@ -56,8 +51,9 @@ public class Constraints {
      * @param roomIndex
      * @return true=available, false = not available
      */
-    public  boolean roomOccupancyConstraint(String[][][] timetable,int day, int period, int roomIndex){
-        return timetable[day][period][roomIndex] == null;//check if the room is available at the current period in the current day
+    public  boolean roomOccupancyConstraint(String[] timetable,int day, int period, int roomIndex){
+        int targetIndex = day * (reader.periodsPerDay * reader.rooms.size()) + period * reader.rooms.size() + roomIndex;
+        return timetable[targetIndex] == null;//check if the room is available at the current period in the current day
     }
 
     /**
@@ -68,9 +64,10 @@ public class Constraints {
      * @param teacherId
      * @return true=available, false= not available
      */
-    public boolean teacherConstraint(String[][][] timetable, int day, int period, String teacherId){
-        for(int roomIndex=0;roomIndex < timetable[day][period].length; roomIndex++){
-            String courseId = timetable[day][period][roomIndex];
+    public boolean teacherConstraint(String[] timetable, int day, int period, String teacherId){
+        for(int roomIndex=0;roomIndex < reader.rooms.size(); roomIndex++){
+            int targetIndex = day * (reader.periodsPerDay * reader.rooms.size()) + period * reader.rooms.size() + roomIndex;
+            String courseId = timetable[targetIndex];
 
             if(courseId != null){
                 Course course = searchForCourse(courseId);
@@ -95,10 +92,11 @@ public class Constraints {
      * @param teacherId
      * @return
      */
-    public int teacherConstraintCost(String[][][] timetable, int day, int period, String teacherId){
+    public int teacherConstraintCost(String[] timetable, int day, int period, String teacherId){
         int cost = -1;
-        for(int roomIndex=0;roomIndex < timetable[day][period].length;roomIndex++){
-            String courseId =  timetable[day][period][roomIndex];
+        for(int roomIndex=0;roomIndex < reader.rooms.size();roomIndex++){
+            int targetIndex = day * (reader.periodsPerDay * reader.rooms.size()) + period * reader.rooms.size() + roomIndex;
+            String courseId =  timetable[targetIndex];
 
             if(courseId != null){
                 Course course = searchForCourse(courseId);
@@ -128,18 +126,12 @@ public class Constraints {
      * @param curriculum
      * @return true=available, false = not available
      */
-    public boolean conflictsConstraint(String[][][] timetable, int day, int period, Curriculum curriculum){
-        for(int roomIndex=0;roomIndex < timetable[day][period].length; roomIndex++){
-            String courseId = timetable[day][period][roomIndex];
+    public boolean conflictsConstraint(String[] timetable, int day, int period, Curriculum curriculum){
+        for(int roomIndex=0;roomIndex < reader.rooms.size(); roomIndex++){
+            int targetIndex = day * (reader.periodsPerDay * reader.rooms.size()) + period * reader.rooms.size() + roomIndex;
+            String courseId = timetable[targetIndex];
             
             if(courseId != null){
-                // Course course = searchForCourse(courseId);
-                // if(course == null){
-                //     System.out.println("There is a null even though there shouldn't be in conflictsConstraint");
-                //     return false;
-                // }
-                // else if(curriculum.courses.contains(course.courseId))
-                //     return false;//curriculum already has a course assigned in this period
                 if(curriculum.courses.contains(courseId))
                     return false;
             }
@@ -156,11 +148,12 @@ public class Constraints {
      * @param curriculum
      * @return
      */
-    public int conflictsConstraintCost(String[][][] timetable, int day, int period, Curriculum curriculum){
+    public int conflictsConstraintCost(String[] timetable, int day, int period, Curriculum curriculum){
         int cost = -1;
 
-        for(int roomIndex = 0; roomIndex < timetable[day][period].length;roomIndex++){
-            String courseId = timetable[day][period][roomIndex];
+        for(int roomIndex = 0; roomIndex < reader.rooms.size();roomIndex++){
+            int targetIndex = day * (reader.periodsPerDay * reader.rooms.size()) + period * reader.rooms.size() + roomIndex;
+            String courseId = timetable[targetIndex];
 
             if(courseId != null){
                 if(curriculum.courses.contains(courseId)){
@@ -178,16 +171,16 @@ public class Constraints {
      * @param course
      * @return the number of assigned lectures currently for the course
      */
-    public int getAssignedLecturesCount(String[][][] timetable,Course course){
+    public int getAssignedLecturesCount(String[] timetable,Course course){
         int lectureCount = 0;
 
-        for(int day = 0; day < reader.numDays; day++){
-            for(int period = 0; period < reader.periodsPerDay; period++)
-                for(int roomIndex = 0; roomIndex < reader.rooms.size(); roomIndex++){
-                    if(timetable[day][period][roomIndex] != null  && course.courseId.equals(timetable[day][period][roomIndex]))
-                        lectureCount++;
-                }
+        for(int i = 0; i < timetable.length; i++){
+            if(timetable[i] != null  && course.courseId.equals(timetable[i]))
+                lectureCount++;
+            if(lectureCount == course.numLectures)
+                break;
         }
+
 
         return lectureCount;
     }
@@ -213,22 +206,25 @@ public class Constraints {
      * @param timetable
      * @return 
      */
-    public int roomCapacityConstraintCost(String[][][] timetable){
+    public int roomCapacityConstraintCost(String[] timetable){
         int roomCost = 0;
 
-        for(int day=0; day < reader.numDays;  day++)
-            for(int period = 0; period < reader.periodsPerDay; period++)
-                for(int roomIndex=0;roomIndex<reader.rooms.size();roomIndex++){
-                    if(timetable[day][period][roomIndex] != null){
-                        int numStudentsEnrolled = reader.coursesMap.get(timetable[day][period][roomIndex]).numStudentsEnrolled;
-                        int roomSize = reader.rooms.get(roomIndex).capacity;
-                        int difference = roomSize - numStudentsEnrolled;
+        int roomIndex = 0;
+        for(int i=0; i<timetable.length;i++){
+            if(timetable[i] != null){
+                int numStudentsEnrolled = reader.coursesMap.get(timetable[i]).numStudentsEnrolled;
+                int roomSize = reader.rooms.get(roomIndex).capacity;
+                int difference = roomSize - numStudentsEnrolled;
 
-                        if(difference < 0){
-                            roomCost += -1 * difference;
-                        }
-                    }
+                if(difference < 0){
+                    roomCost += -1 * difference;
                 }
+            }
+
+            roomIndex++;
+            if(roomIndex == reader.rooms.size())
+                roomIndex = 0;
+        }
         return roomCost;
     }
 
@@ -238,7 +234,7 @@ public class Constraints {
      * @param timetable
      * @return
      */
-    public int minimumWorkingDaysConstraintCost(String[][][] timetable){
+    public int minimumWorkingDaysConstraintCost(String[] timetable){
         int finalCost = 0;
         for(Course course: reader.courses){
             int minWorkingDays = course.minWorkingDays;
@@ -246,16 +242,24 @@ public class Constraints {
             int numLecturesFound = 0;//to stop the looping process once all lectures found
             boolean stop = false;
 
-            for(int day=0; day< reader.numDays && !stop;day++){
-                for(int period=0;period< reader.periodsPerDay && !stop;period++){
-                    for(int roomIndex = 0; roomIndex < reader.rooms.size() && !stop; roomIndex++){
-                        if(timetable[day][period][roomIndex] != null && timetable[day][period][roomIndex].equals(course.courseId)){
-                            numLecturesFound++;
-                            stop = (numLecturesFound >= course.numLectures)? true : false;
-                        }
-                    }
+            int day=0,period=0,roomIndex=0;
+            for(int i=0;i<timetable.length;i++){
+                if(timetable[i] != null && timetable[i].equals(course.courseId)){
+                    numLecturesFound++;
+                    stop = (numLecturesFound >= course.numLectures)? true : false;
                 }
-                currWorkingDays = (stop) ? currWorkingDays+1 : currWorkingDays;
+
+                roomIndex++;
+                if(roomIndex == reader.rooms.size()){
+                    roomIndex=0;
+                    period++;
+                }
+
+                if(period == reader.periodsPerDay){
+                    period = 0;
+                    day++;
+                    currWorkingDays = (stop) ? currWorkingDays+1 : currWorkingDays;
+                }
             }
 
             int result = currWorkingDays - minWorkingDays;
@@ -274,7 +278,7 @@ public class Constraints {
      * @param timetable
      * @return
      */
-    public int curriculumCompactnessCost(String[][][] timetable){
+    public int curriculumCompactnessCost(String[] timetable){
         int finalCost = 0;
         int isolatedLectures = 0;
         for(Curriculum c: reader.curricula){
@@ -283,32 +287,40 @@ public class Constraints {
                 int lastDay = -1;
                 boolean foundCourse = false;
                 //iterate through the timetable to find adjacent lectures
-                for(int day=0; day < reader.numDays; day++){
-                    for(int period=0; period < reader.periodsPerDay; period++){
-                        for(int roomIndex = 0; roomIndex < reader.rooms.size(); roomIndex++){
-                            if(timetable[day][period][roomIndex] != null && course.equals(timetable[day][period][roomIndex])){
-                                if(!foundCourse){//found unpaired course
-                                    lastDay = day;
-                                    lastPeriod = period;
-                                    foundCourse = true;
-                                }
-                                else if(foundCourse && lastDay == day && lastPeriod+1 == period){
-                                    foundCourse = false;
-                                }
-                                else if(foundCourse){
-                                    isolatedLectures++;
-                                    lastDay = day;
-                                    lastPeriod = period;
-                                }
-                            }
+                int day=0,period=0,roomIndex=0;
+
+                for(int i=0;i<timetable.length;i++){
+
+                    if(timetable[i] != null && course.equals(timetable[i])){
+                        if(!foundCourse){//found unpaired course
+                            lastDay = day;
+                            lastPeriod = period;
+                            foundCourse = true;
+                        }
+                        else if(foundCourse && lastDay == day && lastPeriod+1 == period){
+                            foundCourse = false;
+                        }
+                        else if(foundCourse){
+                            isolatedLectures++;
+                            lastDay = day;
+                            lastPeriod = period;
                         }
                     }
-                    if(foundCourse){
-                        isolatedLectures++;
-                        foundCourse = false;
+                    roomIndex++;
+                    if(roomIndex == reader.rooms.size()){
+                        roomIndex = 0;
+                        period++;
+                    }
+                    if(period == reader.periodsPerDay){
+                        period = 0;
+                        day++;
+
+                        if(foundCourse){
+                            isolatedLectures++;
+                            foundCourse = false;
+                        }
                     }
                 }
-
             }
         }
 
@@ -322,7 +334,7 @@ public class Constraints {
      * @param timetable
      * @return
      */
-    public int roomStabilityConstraintCost(String[][][] timetable){
+    public int roomStabilityConstraintCost(String[] timetable){
         Map<String,List<Integer>> rooms = new HashMap<String, List<Integer>>();
         int finalCost = 0;
 
@@ -330,16 +342,16 @@ public class Constraints {
             rooms.put(course.courseId, new ArrayList<Integer>());
         }
 
-        for(int day=0; day < reader.numDays; day++){
-            for(int period = 0; period < reader.periodsPerDay; period++){
-                for(int roomIndex = 0; roomIndex < reader.rooms.size(); roomIndex++){
-                    if(timetable[day][period][roomIndex] != null){
-                        rooms.get(timetable[day][period][roomIndex]).add(roomIndex);
-                    }
-                }
+        int roomIndex = 0;
+        for(int i=0;i<timetable.length;i++){
+            if(timetable[i] != null){
+                rooms.get(timetable[i]).add(roomIndex);
             }
+            roomIndex++;
+            if(roomIndex == reader.rooms.size())
+                roomIndex = 0;
         }
-
+        
         for(Map.Entry<String,List<Integer>> val : rooms.entrySet()){
             List<Integer> value = val.getValue().stream().distinct().collect(Collectors.toList());
             String key = val.getKey();

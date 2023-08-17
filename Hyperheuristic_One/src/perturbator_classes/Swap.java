@@ -21,8 +21,8 @@ public class Swap extends Heuristic{
      * This method swaps 2 randomly selected courses
      * @param timetable This should be a copy of the original timetable
      */
-    public String[][][] executeHeuristic(String[][][] timetable){
-        String [][][]copy = createTimetableCopy(timetable);
+    public String[] executeHeuristic(String[] timetable){
+        String []copy = createTimetableCopy(timetable);
 
         //randomly select 2 different timeslots
         int dayOne = random.nextInt(reader.numDays);
@@ -46,13 +46,15 @@ public class Swap extends Heuristic{
             }
         }
 
-        String courseOne = copy[dayOne][periodOne][roomIndexOne];
-        String courseTwo = copy[dayTwo][periodTwo][roomIndexTwo];
+        int targetIndexOne = dayOne * (reader.periodsPerDay * reader.rooms.size()) + periodOne * reader.rooms.size() + roomIndexOne;
+        int targetIndexTwo = dayTwo * (reader.periodsPerDay * reader.rooms.size()) + periodTwo * reader.rooms.size() + roomIndexTwo;
+        String courseOne = copy[targetIndexOne];
+        String courseTwo = copy[targetIndexTwo];
 
         
         //swap the courses at the timeslots
-        copy[dayOne][periodOne][roomIndexOne] = courseTwo;
-        copy[dayTwo][periodTwo][roomIndexTwo] = courseOne;
+        copy[targetIndexOne] = courseTwo;
+        copy[targetIndexTwo] = courseOne;
             
         return copy;
     }

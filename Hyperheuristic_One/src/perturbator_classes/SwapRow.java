@@ -19,8 +19,8 @@ public class SwapRow extends Heuristic {
         super(n, random, reader, alpha, beta, delta);
     }
 
-    public String[][][] executeHeuristic(String[][][] timetable){
-        String[][][] copy = createTimetableCopy(timetable);
+    public String[] executeHeuristic(String[] timetable){
+        String[] copy = createTimetableCopy(timetable);
         int numDays = reader.numDays;
         int periodsPerDay = reader.periodsPerDay;
         int numRooms = reader.rooms.size();
@@ -40,10 +40,12 @@ public class SwapRow extends Heuristic {
         }
 
         for(int roomIndex = 0; roomIndex < numRooms; roomIndex++){
-            String temp = copy[day][rowOne][roomIndex];
+            int targetIndexOne = day * (reader.periodsPerDay * reader.rooms.size()) + rowOne * reader.rooms.size() + roomIndex;
+            int targetIndexTwo = day * (reader.periodsPerDay * reader.rooms.size()) + rowTwo * reader.rooms.size() + roomIndex;
+            String temp = copy[targetIndexOne];
 
-            copy[day][rowOne][roomIndex] = copy[day][rowTwo][roomIndex];
-            copy[day][rowTwo][roomIndex] = temp;
+            copy[targetIndexOne] = copy[targetIndexTwo];
+            copy[targetIndexTwo] = temp;
         }
         
         return copy;

@@ -10,14 +10,14 @@ import data_classes.Curriculum;
 import data_classes.DataReader;
 
 public class Timetable {
-    private String[][][] timetable;
+    private String[] timetable;
     private int fitness;
     private int hardConstraintCost;
     private int softConstraintCost;
     private final DataReader reader;
     private final Constraints constraints;
 
-    public Timetable(String[][][] timetable, DataReader reader){
+    public Timetable(String[] timetable, DataReader reader){
         this.timetable = getTimetableCopy(timetable);
         fitness = Integer.MAX_VALUE;
         hardConstraintCost = Integer.MAX_VALUE;
@@ -97,11 +97,11 @@ public class Timetable {
      * Updates timetable with a new timetable
      * @param timetable
      */
-    public void setTimetable(String[][][] timetable){
+    public void setTimetable(String[] timetable){
         this.timetable = getTimetableCopy(timetable);
     }
 
-    public String[][][] getTimetable(){
+    public String[] getTimetable(){
         return this.timetable;
     }
     /**
@@ -109,16 +109,14 @@ public class Timetable {
      * @param timetable
      * @return copy of timetable
      */
-    public String[][][] getTimetableCopy(String[][][] timetable){
-        String [][][]result = new String[timetable.length][timetable[0].length][timetable[0][0].length];
+    public String[] getTimetableCopy(String[] timetable){
+        String []result = new String[timetable.length];
 
-        for(int i=0; i < timetable.length; i++)
-            for(int j=0; j < timetable[0].length; j++)
-                for(int k=0; k < timetable[0][0].length; k++)
-                    if(timetable[i][j][k] != null)
-                        result[i][j][k] = new String(timetable[i][j][k]);
-                    else
-                        result[i][j][k] = null;
+        for(int k=0; k < timetable.length; k++)
+            if(timetable[k] != null)
+                result[k] = new String(timetable[k]);
+            else
+                result[k] = null;
 
         return result;
     }

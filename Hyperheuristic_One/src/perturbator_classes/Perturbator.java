@@ -178,7 +178,7 @@ public class Perturbator {
         System.out.println("result: " + result);
     }
 
-    public Timetable tournamentSelection(String[][][] timetable, DataReader reader){
+    public Timetable tournamentSelection(String[] timetable, DataReader reader){
         List<Heuristic> population = new ArrayList<Heuristic>();
 
         while(population.size() < tournamentSize){

@@ -1,0 +1,10 @@
+1: Best fitness: 48 : 2175
+2: Best fitness: 7 : 55
+3: Best fitness: 6 : 42
+4: Best fitness: 6 : 38
+5: Best fitness: 4 : 38
+6: Best fitness: 2 : 38
+7: Best fitness: 2 : 38
+8: Best fitness: 2 : 38
+9: Best fitness: 2 : 38
+10: Best fitness: 2 : 36
