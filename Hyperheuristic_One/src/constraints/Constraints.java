@@ -229,6 +229,21 @@ public class Constraints {
     }
 
     /**
+     * 
+     * @param timetable
+     * @param courseId
+     * @param roomIndex
+     * @return
+     */
+    public int roomCapacityConstraintCost(String courseId, int roomIndex){
+        int numStudentsEnrolled = reader.coursesMap.get(courseId).numStudentsEnrolled;
+        int roomSize = reader.rooms.get(roomIndex).capacity;
+        int difference = roomSize - numStudentsEnrolled;
+
+        return (difference < 0) ? (-1*difference) : 0;
+    }
+
+    /**
      * The lectures of each course must be spread into the given minimum number of days.
      * Each day below the minimum counts as 5 points of penalty
      * @param timetable

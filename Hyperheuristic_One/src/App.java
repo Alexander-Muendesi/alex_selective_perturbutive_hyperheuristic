@@ -26,7 +26,7 @@ public class App {
         //         System.out.println(c);
         // }
 
-        Random random = new Random(0);
+        Random random = new Random(15646546);
         DataReader reader = new DataReader(1);
         int numInvocations = 26;
         double alpha = 0.6953194531250001, beta = 0.335940859375, delta = 1.836727890625;//delta was 0.9 b4/0.5 seems to be best for now

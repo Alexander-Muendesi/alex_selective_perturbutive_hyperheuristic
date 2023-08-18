@@ -30,47 +30,103 @@ public class Solutions {
     public String[] generateSolution(){
         List<Course> courses = fisherYatesShuffle(reader.courses);
 
-        //loop through courses and assign lectures to the timetable;
-        int roomIndex = 0,day = 0,period = 0;
+        int coursesAssigned = courses.size();//keep track of how many courses are left to be fully assigned.
+        int[] lecturesAssigned = new int[courses.size()];
+        boolean[] finishedCourses = new boolean[courses.size()];
 
-        for(Course course: courses){
-            int lecturesAssigned = 0;
+        for(int i=0;i>courses.size();i++){
+            finishedCourses[i] = false;
+            lecturesAssigned[i] = 0;
+        }
 
-            while(lecturesAssigned < course.numLectures){//this condition ensures the lecture allocations hard constraint is satisfied.
-                int targetIndex = day * (reader.periodsPerDay * reader.rooms.size()) + period * reader.rooms.size() + roomIndex;
-                if(timetable[targetIndex] == null){//check if current slot is available
-                    //check if all hard constraints are satisfied
-                    boolean allConstraintsSatisfied = true;
 
-                    allConstraintsSatisfied = constraints.roomOccupancyConstraint(timetable, day, period, roomIndex);
-                    // System.out.println("1: " + allConstraintsSatisfied);
-                    allConstraintsSatisfied = constraints.teacherConstraint(timetable,day,period,course.teacherId);
-                    // System.out.println("2: " + allConstraintsSatisfied);
-                    allConstraintsSatisfied = constraints.conflictsConstraint(timetable, day, period, constraints.searchFoCurriculumByCourseId(course.courseId));
-                    // System.out.println("3: " + allConstraintsSatisfied);
-                    allConstraintsSatisfied = constraints.unavailabilityConstraint(course.courseId, day, period);
-                    // System.out.println("4: " + allConstraintsSatisfied);
-                    if(allConstraintsSatisfied){
-                        timetable[targetIndex] = course.courseId;
-                        lecturesAssigned++;
-                        // System.out.println("Lectures Assigned: " + lecturesAssigned);
+        while(coursesAssigned > 0){
+            int day=0,period=0,roomIndex=0, numPlaces=0, index=0, lowestPlaces = Integer.MAX_VALUE, worst = 0;
+    
+            //find the course that can be placed in the least amount of places
+            for(Course course: reader.courses){
+                day=0;period=0;roomIndex=0;numPlaces=0;
+    
+                for(int i=0;i<timetable.length && lowestPlaces != 0;i++){
+                    if(timetable[i] == null){
+                        boolean allConstraintsSatisfied = true;
+                        allConstraintsSatisfied = constraints.roomOccupancyConstraint(timetable, day, period, roomIndex);
+                        allConstraintsSatisfied = constraints.teacherConstraint(timetable,day,period,course.teacherId);
+                        allConstraintsSatisfied = constraints.conflictsConstraint(timetable, day, period, constraints.searchFoCurriculumByCourseId(course.courseId));
+                        // allConstraintsSatisfied = constraints.unavailabilityConstraint(course.courseId, day, period);
+    
+                        if(allConstraintsSatisfied)
+                            numPlaces++;
+                    }
+                    
+                    // System.out.println("numPlaces: " + numPlaces + " lowestPlaces: " + lowestPlaces);
+                    if(numPlaces < lowestPlaces && !finishedCourses[index]){
+                        lowestPlaces = numPlaces;
+                        worst = index;
+                    }
+    
+                    roomIndex++;
+                    if(roomIndex == reader.rooms.size()){
+                        roomIndex = 0;
+                        period++;
+                    }
+                    if(period == reader.periodsPerDay){
+                        period = 0;
+                        day++;
                     }
                 }
+                index++;
+                if(lowestPlaces == 0)
+                    break;
+            }
+    
+            index = 0; day=0; period=0; roomIndex=0;
+            Course course = courses.get(worst);
+            int bestPlace = 0, currCost = 0, bestCost = Integer.MAX_VALUE;
+            //find a place to assign the course where it violates the least amount of constraints
+            for(int i=0; i < timetable.length; i++){
+                if(timetable[i] == null){
+                    timetable[i] = course.courseId;
+                    currCost += constraints.teacherConstraintCost(timetable, day, period, course.teacherId);
+                    currCost += constraints.conflictsConstraintCost(timetable, day, period, constraints.searchFoCurriculumByCourseId(course.courseId));
+                    currCost += constraints.roomCapacityConstraintCost(course.courseId, roomIndex);
+                    currCost += constraints.minimumWorkingDaysConstraintCost(timetable);
+                    currCost += constraints.curriculumCompactnessCost(timetable);
+                    currCost += constraints.roomStabilityConstraintCost(timetable);
 
-                period++;//move to the next period
-                if(period >= reader.periodsPerDay){
+                    // System.out.println("currCost: " + currCost + " bestCost: " + bestCost);
+                    if(currCost < bestCost){
+                        bestCost = currCost;
+                        bestPlace = index;
+                    }
+                    timetable[i] = null;
+                }
+
+
+                roomIndex++;
+                if(roomIndex == reader.rooms.size()){
+                    roomIndex = 0;
+                    period++;
+                }
+                if(period == reader.periodsPerDay){
                     period = 0;
                     day++;
                 }
-    
-                if(day >= reader.numDays){
-                    day = 0;
-                    roomIndex++;
-
-                    if(roomIndex >= reader.rooms.size())
-                        roomIndex = 0;
-                }
+                index++;
+                currCost = 0;
             }
+
+            timetable[bestPlace] = course.courseId;
+            lecturesAssigned[worst]++;
+            if(lecturesAssigned[worst] == course.numLectures){
+                finishedCourses[worst] = true;
+                coursesAssigned--;
+            }
+
+            // System.out.println("Worst: " + worst);
+            // for(int val: lecturesAssigned)
+            //     System.out.print(val + " ");
+            // System.out.println();
         }
 
         return timetable;
