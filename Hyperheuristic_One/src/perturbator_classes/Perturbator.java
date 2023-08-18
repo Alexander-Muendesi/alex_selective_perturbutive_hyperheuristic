@@ -66,58 +66,12 @@ public class Perturbator {
         int[] result = {};
 
         int c = 1;
-        while(true && numIterations < 500000){//change this stopping condition later. Thinking a 30 period moving average of fitness of timetable
+        while(numIterations <= 100000){//change this stopping condition later. Thinking a 30 period moving average of fitness of timetable
             if(numIterations % 10000 == 0){
                 System.out.println(c++ + ": Best fitness: " + bestFitness[0] + " : " + bestFitness[1] );
             }
-            //heuristic selection
-            Heuristic heuristic = null;
-            int index = random.nextInt(heuristics.size());
-            heuristic = heuristics.get(index);
-            /* 
-            if(numIterations < numInvocations){
-                //randomly select one of the heuristics until you have numInvocations. Afterwards you can use history as choice function is intended.
-                int index = random.nextInt(heuristics.size());
-                heuristic = heuristics.get(index);
-            }
-            else{//choice function has enough data to work now.
-                int counter = 0;
-                int smallest = 0;
-                double rank = Double.MAX_VALUE;
-                for(Heuristic h: heuristics){
-                    if(counter == 0){
-                        rank = h.calculateRank(heuristics);
-                        // System.out.println("Rank0: " + rank);
-                    }
-                    else{
-                        double temp = h.calculateRank(heuristics);
-                        // System.out.println("temp: " + temp);
-                        if(temp < rank){
-                            rank = temp;
-                            smallest = counter;
-                        }
-                    }
-                    counter++;
-                }
-                System.out.println();
-                heuristic = heuristics.get(smallest);
-            }*/
-
-            //execute chosen heuristic
-            // copyTimetable.setTimetable(heuristic.executeHeuristic(timetable.getTimetable()));
+            //heuristic selection and execution of heuristic
             copyTimetable = tournamentSelection(timetable.getTimetable(), reader);
-
-            /* 
-            if(heuristic.lastApplicationTime == Double.MAX_VALUE){//first time the heuristic is being invoked
-                heuristic.addTime(0);//for first time invocation set the time to 0 as our default value
-                heuristic.lastApplicationTime = System.currentTimeMillis();
-                heuristic.addFitness(copyTimetable.calculateFitness());
-            }
-            else{
-                heuristic.addTime(System.currentTimeMillis() - heuristic.lastApplicationTime);
-                heuristic.lastApplicationTime = System.currentTimeMillis();
-                heuristic.addFitness(copyTimetable.calculateFitness());
-            }*/
 
             //move acceptance stuff
             int[] currentFitness = copyTimetable.calculateFitness();
@@ -126,56 +80,20 @@ public class Perturbator {
                 timetable.setTimetable(copyTimetable.getTimetable());
                 bestFitness = currentFitness;
             }
-            // else if(currentFitness[0] <= bestFitness[0]){//accept the move
-            //     timetable.setTimetable(copyTimetable.getTimetable());
-            //     bestFitness = currentFitness;
-            // }
-            /* 
-            else if(numIterations > iterationLimit && currentFitness < thresholdValue * bestFitness){//accept move based on threshold criteria
+            //new code is below
+            else if(numIterations > iterationLimit && currentFitness[0]+currentFitness[1] < thresholdValue * bestFitness[0]+bestFitness[1]){//accept move based on threshold criteria
                 timetable.setTimetable(copyTimetable.getTimetable());
                 bestFitness = currentFitness;
             }
-            else{//move is rejected
-                copyTimetable.setTimetable(timetable.getTimetable());
-            }
 
-            if(currentFitness >= bestFitness){//adapt the threshold if there is no improvement in fitness
+            if(currentFitness[0]+currentFitness[1] > bestFitness[0]+bestFitness[1]){//adapt the threshold if there is no improvement in fitness
                 thresholdValue *= thresholdAdaptationFactor;
-            }*/
-
-            double f = bestFitness[0]+bestFitness[1];
-            movingAverage.add(f);
-
-            //stopping condition stuff
-            if(numIterations > numInvocations && movingAverageIterations % 12 == 0){
-                double denominator = 12;
-                double average = 0;
-
-                for(double val: movingAverage)
-                    average += val;
-                average = average / denominator;
-                // System.out.println("average: " + average + " previous average: " + prevAverage);
-
-                if(prevAverage == -1)
-                    prevAverage = average;
-                else{
-                    if(Math.abs(prevAverage - average) < 0.1){
-                        stopCounter++;
-                    }
-                    else{
-                        // System.out.println("difference: " + Math.abs(prevAverage - average));
-                        prevAverage = average;
-                    }
-                }
-                movingAverageIterations = 1;
-                movingAverage.clear();
             }
-            if(numIterations >= numInvocations)
-                movingAverageIterations++;
+
             numIterations++;
             result = bestFitness;
         }
-        System.out.println("result: " + result);
+        System.out.println("result: " + result[0] + " " + result[1]);
     }
 
     public Timetable tournamentSelection(String[] timetable, DataReader reader){

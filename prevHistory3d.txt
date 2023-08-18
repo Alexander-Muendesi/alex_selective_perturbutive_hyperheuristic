@@ -8,3 +8,15 @@
 8: Best fitness: 2 : 38
 9: Best fitness: 2 : 38
 10: Best fitness: 2 : 36
+----------------------------
+1: Best fitness: 29 : 1026
+2: Best fitness: 0 : 54
+3: Best fitness: 1 : 42
+4: Best fitness: 0 : 42
+5: Best fitness: 0 : 38
+6: Best fitness: 0 : 38
+7: Best fitness: 0 : 38
+8: Best fitness: 0 : 38
+9: Best fitness: 0 : 38
+10: Best fitness: 0 : 38
+11: Best fitness: 0 : 38

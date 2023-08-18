@@ -27,7 +27,7 @@ public class App {
         // }
 
         Random random = new Random(15646546);
-        DataReader reader = new DataReader(1);
+        DataReader reader = new DataReader(2);
         int numInvocations = 26;
         double alpha = 0.6953194531250001, beta = 0.335940859375, delta = 1.836727890625;//delta was 0.9 b4/0.5 seems to be best for now
         int iterationLimit = 7085;

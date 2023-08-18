@@ -88,45 +88,4 @@ public abstract class Heuristic {
 
         return result;
     }
-
-    /**
-     * This function calculates the rank assigned by the choice function
-     * @param heuristics the list of heuristics available
-     * @return
-     */
-    public double calculateRank(List<Heuristic> heuristics){
-        //TODO: verify you are interpreting those summations correctly
-        double f1 = calculateF1();
-        double f2 = calculateF2(heuristics);
-        double f3 = delta * ((System.currentTimeMillis() - lastApplicationTime) / 1000);//since we want CPU seconds an not milliseonds
-
-        // System.err.println("f1: " + f1 +" f2: " + f2 + " :" + f3);
-        this.rank = f1 + f2 + f3;
-        return rank;
-    }
-
-    /**
-     * f1 in the choice function
-     */
-    private double calculateF1(){
-        double result = 0;
-        for(int i=0; i< numInvocations;i++){
-            double divisor = (timeHistory[i] == 0)? 1:timeHistory[i];
-            result += (Math.pow(alpha, i - 1)) * (fitnessHistory[i] / divisor);
-        }
-        return result;
-    }
-
-    private double calculateF2(List<Heuristic> heuristics){
-        int result = 0;
-        for(Heuristic h: heuristics){
-            if(!h.equals(this)){
-                for(int i=0; i<numInvocations;i++){
-                    double divisor = (h.timeHistory[i] - timeHistory[i] == 0) ? 1 : h.timeHistory[i] - timeHistory[i];
-                    result += (Math.pow(beta, i-1)) * ((h.fitnessHistory[i]-fitnessHistory[i]) / divisor);
-                }
-            }
-        }
-        return result;
-    }
 }
