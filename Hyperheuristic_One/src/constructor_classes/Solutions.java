@@ -50,11 +50,12 @@ public class Solutions {
                 for(int i=0;i<timetable.length && lowestPlaces != 0;i++){
                     if(timetable[i] == null){
                         boolean allConstraintsSatisfied = true;
+                        
                         allConstraintsSatisfied = constraints.roomOccupancyConstraint(timetable, day, period, roomIndex);
                         allConstraintsSatisfied = constraints.teacherConstraint(timetable,day,period,course.teacherId);
                         allConstraintsSatisfied = constraints.conflictsConstraint(timetable, day, period, constraints.searchFoCurriculumByCourseId(course.courseId));
                         // allConstraintsSatisfied = constraints.unavailabilityConstraint(course.courseId, day, period);
-    
+                        
                         if(allConstraintsSatisfied)
                             numPlaces++;
                     }

@@ -20,3 +20,28 @@
 9: Best fitness: 0 : 38
 10: Best fitness: 0 : 38
 11: Best fitness: 0 : 38
+
+single thread run time:
+
+Days              : 0
+Hours             : 0
+Minutes           : 6
+Seconds           : 40
+Milliseconds      : 319
+Ticks             : 4003192999
+TotalDays         : 0,00463332523032407
+TotalHours        : 0,111199805527778
+TotalMinutes      : 6,67198833166667
+TotalSeconds      : 400,3192999
+TotalMilliseconds : 400319,2999
+
+try{
+            executorService.shutdown();
+            executorService.awaitTermination(10, TimeUnit.MINUTES);
+            cost = future1.get() + future2.get() + future3.get() + future4.get();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
+        Runtime.getRuntime().availableProcessors();

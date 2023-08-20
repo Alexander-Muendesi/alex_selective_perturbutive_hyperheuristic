@@ -16,7 +16,7 @@ public class Perturbator {
     private final int numInvocations;
     double alpha,beta, delta, thresholdValue, thresholdAdaptationFactor;
     private int iterationLimit;
-    private int tournamentSize = 3;
+    public int tournamentSize = 3;
 
     /**
      * 
@@ -31,7 +31,7 @@ public class Perturbator {
      * @param thresholdAdaptationFactor
      */
     public Perturbator(Random random, DataReader reader, int numInvocations, double alpha, double beta, double delta,
-                        int iterationLimit, double thresholdValue, double thresholdAdaptationFactor){
+                        int iterationLimit, double thresholdValue, double thresholdAdaptationFactor, int tournamentSize){
         this.random = random;
         this.reader = reader;
         this.heuristics = new ArrayList<Heuristic>();
@@ -40,6 +40,7 @@ public class Perturbator {
         this.iterationLimit = iterationLimit;
         this.thresholdValue = thresholdValue;
         this.thresholdAdaptationFactor = thresholdAdaptationFactor;
+        this.tournamentSize = tournamentSize;
 
         heuristics.add(new Swap(numInvocations, random, reader, alpha,beta,delta));
         heuristics.add(new SwapRow(numInvocations, random, reader, alpha,beta,delta));
@@ -52,7 +53,7 @@ public class Perturbator {
     /**
      * This method follows Algorithm 7 in the Textbook
      */
-    public void execute(){
+    public int execute(){
         //create an initial solution
         Solutions solution = new Solutions(reader, random);
         Timetable timetable = new Timetable(solution.generateSolution(), reader);
@@ -66,7 +67,7 @@ public class Perturbator {
         int[] result = {};
 
         int c = 1;
-        while(numIterations <= 100000){//change this stopping condition later. Thinking a 30 period moving average of fitness of timetable
+        while(numIterations <= 150000){//change this stopping condition later. Thinking a 30 period moving average of fitness of timetable
             if(numIterations % 10000 == 0){
                 System.out.println(c++ + ": Best fitness: " + bestFitness[0] + " : " + bestFitness[1] );
             }
@@ -94,6 +95,7 @@ public class Perturbator {
             result = bestFitness;
         }
         System.out.println("result: " + result[0] + " " + result[1]);
+        return result[0]+result[1];
     }
 
     public Timetable tournamentSelection(String[] timetable, DataReader reader){

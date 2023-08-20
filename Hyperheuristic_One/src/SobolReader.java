@@ -11,12 +11,13 @@ import java.util.List;
  * iteration limit: [1000, 20000]
  * threshold value: [0.01, 0.9]
  * threshold adaptor value: [0.01, 0.99]
+ * tournament size: [2,5]
  */
 public class SobolReader {
     private List<List<Double>> sobolNumbers;
     private String filename = "master_Sobol_numbers.txt";
-    private double []minVals = {5, 0, 0, 0.1, 1000, 0.01, 0.01};
-    private double []maxVals = {50, 1.00001, 1.00001, 2.00001, 20000, 0.999, 0.999};
+    private double []minVals = {5, 0, 0, 0.1, 1000, 0.01, 0.01,2};
+    private double []maxVals = {50, 1.00001, 1.00001, 2.00001, 20000, 0.999, 0.999,6};
     private int index = 0;
 
     public SobolReader(){
@@ -48,7 +49,7 @@ public class SobolReader {
                     startIndex = endIndex+1;
                     endIndex = line.indexOf('\t', startIndex);
 
-                    if(count >=7)
+                    if(count >=8)
                         break;
                 }
                 sobolNumbers.add(data);

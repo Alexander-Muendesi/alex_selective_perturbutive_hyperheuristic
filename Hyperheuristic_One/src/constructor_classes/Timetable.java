@@ -69,7 +69,6 @@ public class Timetable {
      */
     public int calculateSoftConstraintCost(){
         int cost = 0;
-        //TODO: Multi-threading should be very efficient here since we are just doig read only. 1 thread per cost
         // ExecutorService executorService = Executors.newFixedThreadPool(4);
         // Future<Integer> future1 = executorService.submit(() -> constraints.roomCapacityConstraintCost(timetable));
         // Future<Integer> future2 = executorService.submit(() -> constraints.minimumWorkingDaysConstraintCost(timetable));
