@@ -54,7 +54,7 @@ public class Solutions {
                         allConstraintsSatisfied = constraints.roomOccupancyConstraint(timetable, day, period, roomIndex);
                         allConstraintsSatisfied = constraints.teacherConstraint(timetable,day,period,course.teacherId);
                         allConstraintsSatisfied = constraints.conflictsConstraint(timetable, day, period, constraints.searchFoCurriculumByCourseId(course.courseId));
-                        // allConstraintsSatisfied = constraints.unavailabilityConstraint(course.courseId, day, period);
+                        allConstraintsSatisfied = constraints.unavailabilityConstraint(course.courseId, day, period);
                         
                         if(allConstraintsSatisfied)
                             numPlaces++;
@@ -96,7 +96,7 @@ public class Solutions {
                     currCost += constraints.roomStabilityConstraintCost(timetable);
 
                     // System.out.println("currCost: " + currCost + " bestCost: " + bestCost);
-                    if(currCost < bestCost){
+                    if(currCost < bestCost && constraints.unavailabilityConstraint(course.courseId, day, period)){
                         bestCost = currCost;
                         bestPlace = index;
                     }

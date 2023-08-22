@@ -60,7 +60,24 @@ public class Timetable {
                 conflictsConstraintCost += constraints.conflictsConstraintCost(timetable, day, period, c);
         }
 
-        return conflictsConstraintCost + teacherConstraintCost;
+        int day = 0,period = 0,roomIndex = 0;
+        int unavailabilityConstraintCost = 0;
+        for(int i=0; i<timetable.length;i++){
+            if(timetable[i] != null){
+                unavailabilityConstraintCost += constraints.unavailabilityConstraintCost(timetable[i], day, period);
+            }
+            roomIndex++;
+            if(roomIndex == reader.rooms.size()){
+                roomIndex = 0;
+                period++;
+            }
+            if(period == reader.periodsPerDay){
+                period = 0;
+                day++;
+            }
+        }
+
+        return conflictsConstraintCost + teacherConstraintCost + unavailabilityConstraintCost;
     }
 
     /**
@@ -69,19 +86,6 @@ public class Timetable {
      */
     public int calculateSoftConstraintCost(){
         int cost = 0;
-        // ExecutorService executorService = Executors.newFixedThreadPool(4);
-        // Future<Integer> future1 = executorService.submit(() -> constraints.roomCapacityConstraintCost(timetable));
-        // Future<Integer> future2 = executorService.submit(() -> constraints.minimumWorkingDaysConstraintCost(timetable));
-        // Future<Integer> future3 = executorService.submit(() -> constraints.curriculumCompactnessCost(timetable));
-        // Future<Integer> future4 = executorService.submit(() -> constraints.roomStabilityConstraintCost(timetable));
-        // executorService.shutdown();
-        // try{
-        //     cost = future1.get() + future2.get() + future3.get() + future4.get();
-        // }
-        // catch(Exception e){
-        //     e.printStackTrace();
-        // }
-        
         int roomCapacityConstraintCost = constraints.roomCapacityConstraintCost(timetable);
         int minimumWorkingDaysConstraintCost = constraints.minimumWorkingDaysConstraintCost(timetable);
         int curriculumCompactnessCost = constraints.curriculumCompactnessCost(timetable);
