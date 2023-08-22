@@ -29,7 +29,7 @@ public class App {
         int []files = {1,3,4,11,13,14,15, 18,19 };
         while(true){
             long seed = System.currentTimeMillis();
-            System.out.println("seed: " + 0);
+            System.out.println("seed: " + seed);
             for(int i=0; i<files.length;i++){
                 Random random = new Random(seed);
                 DataReader reader = new DataReader(files[i]);
