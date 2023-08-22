@@ -201,6 +201,14 @@ public class Constraints {
         return true;//course is available for the period
     }
 
+    public int unavailabilityConstraintCost(String courseId, int day, int dayPeriod){
+        int cost = 0;
+        for(Constraint constraint : reader.constraints)
+            if(constraint.courseId.equals(courseId) && constraint.day == day && constraint.dayPeriod == dayPeriod)
+                cost++;
+        return cost;
+    }
+
     /**
      * Each student above the room capacity is 1 penalty;
      * @param timetable

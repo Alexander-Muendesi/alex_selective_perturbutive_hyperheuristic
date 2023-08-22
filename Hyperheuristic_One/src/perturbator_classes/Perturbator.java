@@ -69,7 +69,7 @@ public class Perturbator {
         int c = 1;
         while(numIterations <= 150000){//change this stopping condition later. Thinking a 30 period moving average of fitness of timetable
             if(numIterations % 10000 == 0){
-                System.out.println(c++ + ": Best fitness: " + bestFitness[0] + " : " + bestFitness[1] );
+                System.out.println("Best fitness: " + bestFitness[0] + " " + bestFitness[1]);
             }
             //heuristic selection and execution of heuristic
             copyTimetable = tournamentSelection(timetable.getTimetable(), reader);
@@ -94,7 +94,7 @@ public class Perturbator {
             numIterations++;
             result = bestFitness;
         }
-        System.out.println("result: " + result[0] + " " + result[1]);
+        System.out.println("filenumber: "+reader.filenumber + " " +"result: " + result[0] + " " + result[1]);
         return result[0]+result[1];
     }
 

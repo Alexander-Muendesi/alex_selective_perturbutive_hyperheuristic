@@ -15,12 +15,14 @@ public class DataReader {
     public List<Curriculum> curricula;
     public List<Constraint> constraints;
     public String filename = "Hyperheuristic_One/data/comp";
+    public int filenumber = 0;
 
     /**
      * 
      * @param fileNumber
      */
     public DataReader(int fileNumber){
+        this.filenumber = fileNumber;
         if(fileNumber < 10)
             filename += "0"+ String.valueOf(fileNumber) + ".ctt.txt";
         else

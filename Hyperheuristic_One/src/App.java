@@ -27,18 +27,23 @@ public class App {
         // }
 
         int []files = {1,3,4,11,13,14,15, 18,19 };
-        for(int i=0; i<files.length;i++){
-            System.out.println(i + "\n");
-            Random random = new Random(15646546);
-            DataReader reader = new DataReader(files[i]);
-            int numInvocations = 26;
-            double alpha = 0.6953194531250001, beta = 0.335940859375, delta = 1.836727890625;//delta was 0.9 b4/0.5 seems to be best for now
-            int iterationLimit = 7085;
-            double thresholdValue = 0.5585859375, thresholdAdaptationFactor = 0.8367421875;
-    
-            Perturbator p = new Perturbator(random, reader, numInvocations, alpha, beta, delta, iterationLimit, thresholdValue, thresholdAdaptationFactor,3);
-            p.execute();
-            System.out.println();
+        while(true){
+            long seed = System.currentTimeMillis();
+            System.out.println("seed: " + 0);
+            for(int i=0; i<files.length;i++){
+                Random random = new Random(seed);
+                DataReader reader = new DataReader(files[i]);
+                int numInvocations = 26;
+
+                double alpha = 0.6953194531250001, beta = 0.335940859375, delta = 1.836727890625;//delta was 0.9 b4/0.5 seems to be best for now
+
+                int iterationLimit = 7085;
+                
+                double thresholdValue = 0.5585859375, thresholdAdaptationFactor = 0.8367421875;
+        
+                Perturbator p = new Perturbator(random, reader, numInvocations, alpha, beta, delta, iterationLimit, thresholdValue, thresholdAdaptationFactor,3);
+                p.execute();
+            }
         }
 
         // SobolReader s = new SobolReader();
