@@ -60,24 +60,7 @@ public class Timetable {
                 conflictsConstraintCost += constraints.conflictsConstraintCost(timetable, day, period, c);
         }
 
-        int day = 0,period = 0,roomIndex = 0;
-        int unavailabilityConstraintCost = 0;
-        for(int i=0; i<timetable.length;i++){
-            if(timetable[i] != null){
-                unavailabilityConstraintCost += constraints.unavailabilityConstraintCost(timetable[i], day, period);
-            }
-            roomIndex++;
-            if(roomIndex == reader.rooms.size()){
-                roomIndex = 0;
-                period++;
-            }
-            if(period == reader.periodsPerDay){
-                period = 0;
-                day++;
-            }
-        }
-
-        return conflictsConstraintCost + teacherConstraintCost + unavailabilityConstraintCost;
+        return conflictsConstraintCost + teacherConstraintCost;
     }
 
     /**

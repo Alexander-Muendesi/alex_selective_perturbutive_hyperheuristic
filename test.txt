@@ -1,75 +1,99 @@
-run time = 2 hours 12 mins
-Run One: seed = 15646546
-fileNumber: 1 result: 0 37
+seed: 0
+fileNumber: 1 result: 6 41
+fileNumber: 11 result: 1 46
+fileNumber: 3 result: 2 469
+fileNumber: 4 result: 10 324
+fileNumber: 18 result: 0 302
+fileNumber: 14 result: 1 434
+fileNumber: 13 result: 0 365
+fileNumber: 15 result: 2 469
+seed: 1
+fileNumber: 1 result: 8 37
+fileNumber: 11 result: 1 45
+fileNumber: 3 result: 2 470
+fileNumber: 4 result: 5 324
+fileNumber: 18 result: 0 302
+fileNumber: 15 result: 2 470
+fileNumber: 13 result: 7 365
+fileNumber: 14 result: 5 437
+seed: 2
+fileNumber: 1 result: 0 39
+fileNumber: 11 result: 5 45
+fileNumber: 3 result: 3 468
+fileNumber: 4 result: 11 327
+fileNumber: 18 result: 0 302
+fileNumber: 14 result: 2 439
+fileNumber: 13 result: 7 367
+fileNumber: 15 result: 3 468
+seed: 3
+fileNumber: 1 result: 4 32
 fileNumber: 11 result: 1 41
-fileNumber: 3 result: 1 469
-fileNumber: 4 result: 5 325
+fileNumber: 3 result: 1 470
+fileNumber: 4 result: 1 324
 fileNumber: 18 result: 0 302
-fileNumber: 14 result: 8 440
-fileNumber: 13 result: 7 369
-fileNumber: 15 result: 1 469
-fileNumber: 19 result: 13 379
-Run Two: 5465456
-fileNumber: 1 result: 0 37
-fileNumber: 11 result: 2 40
-fileNumber: 3 result: 4 469
-fileNumber: 4 result: 1 323
+fileNumber: 14 result: 1 437
+fileNumber: 15 result: 1 470
+fileNumber: 13 result: 8 366
+seed: 4
+fileNumber: 1 result: 2 40
+fileNumber: 11 result: 3 44
+fileNumber: 3 result: 2 469
+fileNumber: 4 result: 2 323
 fileNumber: 18 result: 0 302
-fileNumber: 14 result: 3 437
-fileNumber: 13 result: 0 367
-fileNumber: 15 result: 4 469
-fileNumber: 19 result: 4 379
-Run Two: 123456
-fileNumber: 1 result: 6 37
-fileNumber: 11 result: 2 40
-fileNumber: 3 result: 5 468
-fileNumber: 4 result: 6 324
+fileNumber: 13 result: 10 367
+fileNumber: 14 result: 0 437
+fileNumber: 15 result: 2 469
+seed: 5
+fileNumber: 1 result: 6 39
+fileNumber: 11 result: 1 51
+fileNumber: 3 result: 11 470
+fileNumber: 4 result: 10 328
 fileNumber: 14 result: 7 438
 fileNumber: 18 result: 0 302
-fileNumber: 13 result: 3 368
-fileNumber: 15 result: 5 468
-Run Two: 10
-fileNumber: 1 result: 4 35
-fileNumber: 11 result: 4 51
-fileNumber: 3 result: 1 468
-fileNumber: 4 result: 3 325
+fileNumber: 13 result: 8 369
+fileNumber: 15 result: 11 470
+seed: 6
+fileNumber: 1 result: 4 37
+fileNumber: 11 result: 1 46
+fileNumber: 3 result: 4 464
+fileNumber: 4 result: 5 324
 fileNumber: 18 result: 0 302
-fileNumber: 15 result: 1 468
-fileNumber: 14 result: 6 439
-fileNumber: 13 result: 7 368
-Run Two: 20
-fileNumber: 1 result: 10 37
-fileNumber: 11 result: 4 51
-fileNumber: 3 result: 1 468
-fileNumber: 4 result: 7 327
-fileNumber: 18 result: 0 302
-fileNumber: 14 result: 6 438
-fileNumber: 13 result: 0 365
-fileNumber: 15 result: 1 468
-Run Two: 21
-fileNumber: 1 result: 8 37
-fileNumber: 11 result: 5 41
-fileNumber: 3 result: 1 469
-fileNumber: 4 result: 4 323
-fileNumber: 18 result: 0 302
-fileNumber: 14 result: 1 436
-fileNumber: 13 result: 6 366
-fileNumber: 15 result: 1 469
-Run Two: 22
-fileNumber: 1 result: 2 37
+fileNumber: 14 result: 4 437
+fileNumber: 13 result: 7 365
+fileNumber: 15 result: 4 464
+seed: 7
+fileNumber: 1 result: 2 40
 fileNumber: 11 result: 1 40
-fileNumber: 3 result: 0 468
-fileNumber: 4 result: 16 325
+fileNumber: 3 result: 2 468
+fileNumber: 4 result: 7 323
+fileNumber: 14 result: 0 440
 fileNumber: 18 result: 0 302
-fileNumber: 15 result: 0 468
-fileNumber: 14 result: 6 437
-fileNumber: 13 result: 1 366
-Run Two: 23
-fileNumber: 1 result: 2 37
+fileNumber: 13 result: 0 367
+fileNumber: 15 result: 2 468
+seed: 8
+fileNumber: 1 result: 10 35
+fileNumber: 11 result: 1 44
+fileNumber: 3 result: 4 468
+fileNumber: 4 result: 1 324
+fileNumber: 18 result: 0 302
+fileNumber: 13 result: 0 366
+fileNumber: 14 result: 2 435
+fileNumber: 15 result: 4 468
+seed: 9
+fileNumber: 1 result: 3 37
+fileNumber: 11 result: 0 40
+fileNumber: 3 result: 3 458
+fileNumber: 4 result: 3 326
+fileNumber: 18 result: 0 302
+fileNumber: 14 result: 0 437
+fileNumber: 13 result: 10 368
+fileNumber: 15 result: 3 458
+seed: 10
+fileNumber: 1 result: 2 36
 fileNumber: 11 result: 2 40
-fileNumber: 3 result: 5 468
-fileNumber: 4 result: 10 325
+fileNumber: 3 result: 2 468
+fileNumber: 4 result: 5 324
 fileNumber: 18 result: 0 302
-fileNumber: 14 result: 8 440
-fileNumber: 13 result: 10 366
-fileNumber: 15 result: 5 468
+fileNumber: 15 result: 2 468
+fileNumber: 14 result: 4 437
+fileNumber: 13 result: 9 367

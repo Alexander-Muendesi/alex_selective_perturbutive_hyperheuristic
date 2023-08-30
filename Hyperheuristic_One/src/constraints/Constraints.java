@@ -264,11 +264,13 @@ public class Constraints {
             int currWorkingDays = 0;
             int numLecturesFound = 0;//to stop the looping process once all lectures found
             boolean stop = false;
+            boolean foundLectureInDay = false;
 
             int day=0,period=0,roomIndex=0;
-            for(int i=0;i<timetable.length;i++){
+            for(int i=0;i<timetable.length && !stop;i++){
                 if(timetable[i] != null && timetable[i].equals(course.courseId)){
                     numLecturesFound++;
+                    foundLectureInDay = true;
                     stop = (numLecturesFound >= course.numLectures)? true : false;
                 }
 
@@ -281,7 +283,9 @@ public class Constraints {
                 if(period == reader.periodsPerDay){
                     period = 0;
                     day++;
-                    currWorkingDays = (stop) ? currWorkingDays+1 : currWorkingDays;
+                    if(foundLectureInDay)
+                        currWorkingDays = (!stop) ? currWorkingDays+1 : currWorkingDays;
+                    foundLectureInDay = false;
                 }
             }
 
