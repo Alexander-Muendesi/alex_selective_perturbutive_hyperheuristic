@@ -1,3 +1,5 @@
+# Project Description
+A selection perturbative hyper-heuristic for the ITC 2007 curriculum scheduling problem.
 # Data set description
 ## COURSES:
 c0001 t000 6 4 130
